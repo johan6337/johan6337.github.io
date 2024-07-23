@@ -9,7 +9,8 @@ math: true
 mermaid: true
 ---
 
-## Base64
+## <span style="color: orange;">Base64</span>
+
 ### Description
 yet another base64 decoding challenge
 ```python
@@ -50,7 +51,7 @@ print(long_to_bytes(k))
 ```
 FLAG : **ictf{b4se_c0nv3rs1on_ftw_236680982d9e8449}**
 
-## Integrity
+## <span style="color: orange;">Integrity</span>
 
 ### Description 
 I think this is how signing works
@@ -101,7 +102,7 @@ m^30359 ≡ signature (mod n)
 
 FLAG: **ictf{oops_i_leaked_some_info}**
 
-## Tango
+## <span style="color: orange;">Tango</span>
 
 ### Description
 
@@ -227,7 +228,7 @@ print((nonce + checksum + new_ciphertext).hex())
 ```
 FLAG = **ictf{F0xtr0t_L1m4_4lph4_G0lf}**
 
-## Solitute
+## <span style="color: orange;">Solitute</span>
 ### Description
 
 The best thinking has been done in solitude. The worst has been done in turmoil.
