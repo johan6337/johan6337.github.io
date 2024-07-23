@@ -16,7 +16,7 @@ timezone:
 
 title: h4n13 # the main title
 
-tagline: A normal ctf guys from HCMUT # it will display as the sub-title
+tagline: A student from HCMUT with the aspiration to become a blockchain developer  # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog for write ups and sharing knownledge and daily life.
@@ -86,7 +86,7 @@ pageviews:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: # [light | dark]
+theme_mode: dark # [light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
