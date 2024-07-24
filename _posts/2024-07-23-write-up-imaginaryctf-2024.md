@@ -2,7 +2,7 @@
 layout: post
 title: Writeups for ImaginaryCTF 2024
 description: Some crypto challenge writeups.
-date: '2024-04-23 10:43:00 +0700'
+date: '2024-07-23 10:43:00 +0700'
 categories: [WriteUps]
 tags: [crypto]
 math: true
