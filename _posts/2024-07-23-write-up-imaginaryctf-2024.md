@@ -87,7 +87,7 @@ signature = 12758448217614849838213408441855753934197923379936406127669804717869
 ```
 ### Solution
 
-In this challenge we have to find the plaintext since it encrypt with public key and then instead of using private key to decrypt it use the CRC checksum. First brute force the crc checksum since the challenge code uses [CRC-16-CCITT](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) so the checksum is brute-able by add the exponent e to signature modulo equation:
+In this challenge, we have to find the plaintext since it is encrypted with a public key. Instead of using the private key to decrypt it, we use the CRC checksum. First, brute force the CRC checksum, as the challenge code uses [CRC-16-CCITT](https://en.wikipedia.org/wiki/Cyclic_redundancy_check), making the checksum brute-forceable by adding the exponent e to the signature modulo equation:
 ```python
 for i in range(40000):
     if pow(signature,e,n) == pow(ct,i,n):
@@ -97,8 +97,8 @@ for i in range(40000):
 ```
 After retrive the CRC checksum we can calculate the plain text by solving following system of modulo equations: 
 
-m^65537 ≡ ct (mod n)
-m^30359 ≡ signature (mod n)
+\[ m^{65537} \equiv ct \ (\text{mod} \ n) \]
+\[ m^{30359} \equiv \text{signature} \ (\text{mod} \ n) \]
 
 FLAG: **ictf{oops_i_leaked_some_info}**
 
@@ -197,9 +197,11 @@ if __name__ == '__main__':
 
 ### Solution
 
-Salsa 20 is the stream cipher with generate keystream and then xor with ciphertext to generate the corresponding plaintext. In this challenge we need to bitflipping the ciphertext in order to change the plaintext so it can satisfied the condition to obtain the flag and calculate the checksum of the command we send to the server. 
-First encrypt 1 sample command and retrieve the keystream then generate correspoding ciphertext to bitflipping the plaintext. 
-Then we need to calculate the checksum of the plaintext. A little trick here is the server accept the packet with no nonce key. So just send **{'user': 'user', 'command': command}** so we can calculate it CRC32 checksum ourself: 
+"Salsa20 is a stream cipher that generates a keystream and then XORs it with the ciphertext to generate the corresponding plaintext. In this challenge, we need to bit-flip the ciphertext in order to change the plaintext so it can satisfy the condition to obtain the flag and calculate the checksum of the command we send to the server.
+
+First, encrypt one sample command and retrieve the keystream, then generate the corresponding ciphertext to bit-flip the plaintext.
+
+Then, we need to calculate the checksum of the plaintext. A little trick here is that the server accepts the packet with no nonce key. So, just send **{'user': 'user', 'command': command}** so we can calculate the CRC32 checksum ourselves:
 
 ```python
 import json
@@ -290,7 +292,7 @@ if __name__ == "__main__":
 
 ### Solution
 
-In this challenge we have a custom RNG which generate a random keystream and then xor with flag. After analizing the sample keystreams i realized that for about 20000 keystreams the number that appear most at every index of keystream is 0. So just obtain 20000 ciphertext and then find the most ASCII character that appear the most at each index so we can recover the flag:
+In this challenge, we have a custom RNG that generates a random keystream and then XORs it with the flag. After analyzing the sample keystreams, I realized that in about 20,000 keystreams, the number that appears most at every index of the keystream is 0. So, just obtain 20,000 ciphertexts and then find the ASCII character that appears the most at each index so we can recover the flag:
 
 ```python
 from collections import Counter
