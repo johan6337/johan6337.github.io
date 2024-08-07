@@ -109,6 +109,9 @@ For $a \in Z_n$, we call $b \in Z_n$ a **multiplicative inverse** of a if $ab = 
 We have: <br>
 $$Z_n^{*} = \{a \in Z_n | gcd(a,n) = 1\}$$
 
+If n is prime , then gcd(a,n) = 1 for a = 1,...,n - 1, and we have $Z_n^{*} = Z_n - {[0]}$.
+
+
 
 
 
