@@ -43,7 +43,7 @@ Further consequences of the theorem:
 
 **Modular inverses** : If $az \equiv 1 \pmod{n}$, then z is called the modular inverse of a modulo n, and is denoted by $a^{-1}$.
 
-## Chinese Remainder Theorem ##
+## III) Chinese Remainder Theorem ##
 
 Let : <br>
 $X \equiv a_1 \pmod{m_1}$ <br>
@@ -59,7 +59,7 @@ $M \equiv (a_1.M_1.M_1^{-1} + a_2.M_2.M_2^{-1} + ... + a_n.M_n.M_n^{-1}) \pmod{M
 - $M = m_1.m_2...m_n$ and $M_i = M/m_i$ 
 - $M_1.M_1^{-1} \equiv 1 \pmod{m_1}$  
 
-**Example : Solve the following system of congruences: **
+**Example : Solve the following system of congruences:**
 $X \equiv 2 \pmod{3}$ <br>
 $X \equiv 3 \pmod{5}$ <br>
 $X \equiv 2 \pmod{7}$ <br>
