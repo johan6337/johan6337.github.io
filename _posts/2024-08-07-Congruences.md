@@ -12,7 +12,7 @@ mermaid: true
 
 ## I) Definition and basic properties ##
 
-We say that a is congruent to b modulo m if m | (a-b), and we write: $a \equiv b \pmod{m}$
+We say that a is congruent to b modulo m if (a - b) % m = 0, and we write: $a \equiv b \pmod{m}$
 
 Example: $7 \equiv 2 \pmod{5}$, $7 \equiv 12 \pmod{5}$, $7 \equiv -3 \pmod{5}$.
 
@@ -33,7 +33,7 @@ Let a,a',b,b' be integers and m be a positive integer. If $a \equiv a' \pmod{m}$
 
 ### Theorem 1 ###
 
-1. Let $az \equiv b \pmod{n} $ has a solution if and only if d | b.
+1. Let $az \equiv b \pmod{n} $ has a solution if and only if b % d = 0.
 2. Let $az \equiv 0 \pmod{n} $ if and only if $z \equiv 0 \pmod{n/d}$.
 3. For all $z,z' \in \mathbb{Z}$, we have $az \equiv az' \pmod{n}$ if and only if $z \equiv z' \pmod{n/d}$.
 
@@ -45,8 +45,32 @@ Further consequences of the theorem:
 
 ## Chinese Remainder Theorem ##
 
+Let : <br>
+$X \equiv a_1 \pmod{m_1}$ <br>
+$X \equiv a_2 \pmod{m_2}$ <br>
+          ... <br>
+$X \equiv a_n \pmod{m_n}$ <br>
 
+Then exist a unique solution: <br>
 
+$M \equiv (a_1.M_1.M_1^{-1} + a_2.M_2.M_2^{-1} + ... + a_n.M_n.M_n^{-1}) \pmod{M}$ <br>
 
+**Where** :
+- $M = m_1.m_2...m_n$ and $M_i = M/m_i$ 
+- $M_1.M_1^{-1} \equiv 1 \pmod{m_1}$  
 
+**Example : Solve the following system of congruences: **
+$X \equiv 2 \pmod{3}$ <br>
+$X \equiv 3 \pmod{5}$ <br>
+$X \equiv 2 \pmod{7}$ <br>
+
+ 
+ 
+|    a     |     m    |    M     |  $M^{-1}$ |          |
+|----------|----------|----------|----------|----------|
+| $a_1 = 2$| $m_1 = 3$| $M_1 = 35$| $M_1^{-1} = 2$|          |
+| $a_2 = 3$| $m_2 = 5$| $M_2 = 21$| $M_2^{-1} = 1$|  $M = 105$ |
+| $a_3 = 2$| $m_3 = 7$| $M_3 = 15$| $M_3^{-1} = 1$|          |
+
+$X \equiv (2.35.2 + 3.21.1 + 2.15.1) \equiv 23 \pmod{105}$ <br>
 
