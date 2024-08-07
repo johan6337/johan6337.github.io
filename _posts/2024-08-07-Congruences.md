@@ -12,7 +12,7 @@ mermaid: true
 
 ## I) Definition and basic properties ##
 
-We say that a is congruent to b modulo m if $m | (a - b)$, and we write: $a \equiv b \pmod{m}$
+We say that a is congruent to b modulo m if $m \mid (a - b)$, and we write: $a \equiv b \pmod{m}$
 
 Example: $7 \equiv 2 \pmod{5}$, $7 \equiv 12 \pmod{5}$, $7 \equiv -3 \pmod{5}$.
 
@@ -33,7 +33,7 @@ Let a,a',b,b' be integers and m be a positive integer. If $a \equiv a' \pmod{m}$
 
 ### Theorem 1 ###
 
-1. Let $az \equiv b \pmod{n} $ has a solution if and only if $d | b$.
+1. Let $az \equiv b \pmod{n} $ has a solution if and only if $d \mid b$.
 2. Let $az \equiv 0 \pmod{n} $ if and only if $z \equiv 0 \pmod{n/d}$.
 3. For all $z,z' \in \mathbb{Z}$, we have $az \equiv az' \pmod{n}$ if and only if $z \equiv z' \pmod{n/d}$.
 
