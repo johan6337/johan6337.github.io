@@ -10,7 +10,7 @@ mermaid: true
 ---
 
 
-## I)Definition and basic properties ##
+## I) Definition and basic properties ##
 
 We say that a is congruent to b modulo m if \$m|(a-b)\$, and we write \$a \equiv b \pmod{m}\$.
 
@@ -29,7 +29,7 @@ Let a,a',b,b' be integers and m be a positive integer. If $a \equiv a' \pmod{m}$
 1. $a+b \equiv a'+b' \pmod{m}$.
 2. $ab \equiv a'b' \pmod{m}$.
 
-## II)Solving linear congruences ##
+## II) Solving linear congruences ##
 
 ### Theorem 1 ###
 
