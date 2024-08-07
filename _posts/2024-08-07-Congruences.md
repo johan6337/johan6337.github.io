@@ -92,5 +92,18 @@ We also have some binary operations: <br>
 ### 2) Theorem 1 ###
 Let n be a positive integer. Then $Z_n$ consists of n residue classes: $[0],[1],...,[n-1]$.
 
+Addtion and multiplication in $Z_n$ have a very natural algebraic structure. For a,b,c $\in Z_n$, we have: <br>
+- a + b = b + a
+- (a + b) + c = a + (b + c)
+- ab = ba
+- (ab)c = a(bc)
+- a(b + c) = ab + ac
+
+The residue class $[0]$ is the **additive identity**; that is, for all $a \in Z_n$, we have $a + [0] = a$. The residue class $[0]$ also has the property that $a.[0] = [0]$ for all $a \in Z_n$. <br>
+
+Every $a \in Z_n$ has an **additive inverse** $-a \in Z_n$ such that $a + (-a) = [0]$. <br>
+
+The residue class $[1]$ acts as a **multiplicative identity**; that is, for all $a \in Z_n$, we have $a.[1] = a$. <br>
+
 
 
