@@ -74,3 +74,15 @@ $X \equiv 2 \pmod{7}$ <br>
 
 $X \equiv (2.35.2 + 3.21.1 + 2.15.1) \equiv 23 \pmod{105}$ <br>
 
+## IV) Residue classes ##
+
+### 1) Definition ###
+
+To define residue classes, we write: <br>
+$$ [a] = \{x \in \mathbb{Z} | x \equiv a \pmod{m} \} $$
+
+**Example:** <br>
+
+The residue class of $a \equiv 3 \pmod{5}$ is: $$[3] = \{...,-7,-2,3,8,13,...\}$$
+
+
