@@ -14,7 +14,7 @@ mermaid: true
 
 ### 1)Definition ###
 
-We say that a is congruences to b modulo m if $m|(a-b)$, and we write $a \equiv b \pmod{m}$.
+We say that a is congruent to b modulo m if $m|(a-b)$, and we write $a \equiv b \pmod{m}$.
 
 Example: $7 \equiv 2 \pmod{5}$, $7 \equiv 12 \pmod{5}$, $7 \equiv -3 \pmod{5}$.
 
@@ -34,13 +34,3 @@ Let a,a',b,b' be integers and m be a positive integer. If $a \equiv a' \pmod{m}$
 2. $ab \equiv a'b' \pmod{m}$.
 
 ## II)Solving linear congruences ##
-
-
-
-
- 
-
-
-
-
-
