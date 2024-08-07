@@ -105,5 +105,11 @@ Every $a \in Z_n$ has an **additive inverse** $-a \in Z_n$ such that $a + (-a) =
 
 The residue class $[1]$ acts as a **multiplicative identity**; that is, for all $a \in Z_n$, we have $a.[1] = a$. <br>
 
+For $a \in Z_n$, we call $b \in Z_n$ a **multiplicative inverse** of a if $ab = [1]$. Not all $a \in Z_n$ have a multiplicative inverse. We define $Z_n^{*}$ to be the set of all $Z_n$ that have a multiplicative inverse.
+We have: <br>
+$$Z_n^{*} = \{a \in Z_n | gcd(a,n) = 1\}$$
+
+
+
 
 
