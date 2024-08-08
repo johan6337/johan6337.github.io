@@ -16,13 +16,13 @@ We say that a is congruent to b modulo m if $m \mid (a - b)$, and we write: $a \
 
 Example: $7 \equiv 2 \pmod{5}$, $7 \equiv 12 \pmod{5}$, $7 \equiv -3 \pmod{5}$.
 
-### Theorem 1 ###
+### 1)Theorem 1 ###
 
 1. $a \equiv a \pmod{m}$.
 2. If $a \equiv b \pmod{m}$ then it implies that $b \equiv a \pmod{m}$.
 3. If $a \equiv b \pmod{m}$ and $b \equiv c \pmod{m}$, then $a \equiv c \pmod{m}$.
 
-### Theorem 2 ###
+### 2)Theorem 2 ###
 
 Let a,a',b,b' be integers and m be a positive integer. If $a \equiv a' \pmod{m}$ and $b \equiv b' \pmod{m}$, then:
 
@@ -31,7 +31,7 @@ Let a,a',b,b' be integers and m be a positive integer. If $a \equiv a' \pmod{m}$
 
 ## II) Solving linear congruences ##
 
-### Theorem 1 ###
+### 1)Theorem 1 ###
 
 1. Let $az \equiv b \pmod{n} $ has a solution if and only if $d \mid b$.
 2. Let $az \equiv 0 \pmod{n} $ if and only if $z \equiv 0 \pmod{n/d}$.
@@ -90,6 +90,7 @@ We also have some binary operations: <br>
 - $[a].[b] = [a . b]$
 
 ### 2) Theorem 1 ###
+
 Let n be a positive integer. Then $Z_n$ consists of n residue classes: $[0],[1],...,[n-1]$.
 
 Addtion and multiplication in $Z_n$ have a very natural algebraic structure. For a,b,c $\in Z_n$, we have: <br>
@@ -131,6 +132,7 @@ $$\phi(n) = \prod_{i=1}^{k} \phi(n_i).$$
 
 
 ### 3) Theorem 2 ###
+
 Let p be a prime number and k be a positive integer. Then: <br>
 $$\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1).$$
 
@@ -148,11 +150,10 @@ $$a^{k} \equiv 1 \pmod{n}$$
 From the above discussion, we see that the first k powers of a, that is, $a^1,a^2,...,a^k$, are distinct modulo n. The next k powers of a, that is, $a^{k+1},a^{k+2},...$, are congruent to $a,a^2,...$ modulo n. <br>
 
 ### 1) Theorem 1 ###
+
 Let n be a positive integer, and let a be an element of $Z_n^*$ of multiplicative order k. Then for every $i \in Z$, we have $a^i = 1$ if and only if $k \mid i$. <br>
 
 **Example:** Let n = 7 and a = 3. Then $Z_7^* = \{1,2,3,4,5,6\}$, and we have: <br>
-
- 
 
 |  i  |   1  |   2   |   3   |   4   |   5   |   6   |
 |-----|------|-------|-------|-------|-------|-------|
@@ -163,10 +164,10 @@ Let n be a positive integer, and let a be an element of $Z_n^*$ of multiplicativ
 |$5^i \pmod{7}$| 5 | 4 | 6 | 2 | 3 | 1 |
 |$6^i \pmod{7}$| 6 | 1 | 6 | 1 | 6 | 1 |
 
- 
 So with modulo 7 we have: 1 has order 1; 6 has order 2; 3 has order 6; 2,4,5 have order 3. <br>
 
 ### 2) Euler's theorem ###
+
 Let n be a positive integer and $a \in Z_n^*$. Then: $a^{\phi(n)} = 1$.In particular, the multiplicative order of a devides $\phi(n)$.
 
 ### 3) Fermat's little theorem ###
@@ -175,7 +176,6 @@ For every prime p,and every $a \in Z_p^*$, we have: $a^{p} = a$. <br>
 
 For a given positive integer n, we say that $$a \in Z$$ with gcd(a,n) = 1 is a **primitive root modulo** n if the multiplicative order of a modulo n is equal to $$\phi(n)$$. If this is the case, then for a = [a] $$\in Z_n^*$$, the powers $$a^i$$ range over all elements of $$Z_n^*$$ as i ranges over all the interval 0,...,$$\phi(n) - 1$$. Not all positive integers have primitive roots. <br>
 
-
 ### 4) Theorem 2 ###
 
 Suppose a $\in Z_n^*$ has multiplicative order k. Then for every m $\in Z$,
@@ -183,6 +183,51 @@ the multiplicative order of $a^m$ is equal to k/gcd(k,m). <br>
 
 ## VII) Quadratic residues ##
 
+### 1) Quadratic residues ###
+
+####  Theorem 1 ####
+
+- If $$a \in (Z_{n}^{*})^{m}$$, then $$a^{-1} \in (Z_{n}^{*})^{m}$$
+- If $$a \in (Z_{n}^{*})^{m}$$ and $$b \in (Z_{n}^{*})^{m}$$ then $$ab \in (Z_{n}^{*})^{m}$$
+- If $$a \in (Z_{n}^{*})^{m}$$ and $$b \notin (Z_{n}^{*})^{m}$$ then $$ab \notin (Z_{n}^{*})^{m}$$
+
+#### Theorem 2 ####
+
+Let n be a positive. For each $$a \in Z_{n}^{*}$$, and all $$l,m \in Z$$ with $$\gcd(l,m) = 1$$, if $$a^{l} \in (Z_{n}^{*})^{m}$$ then $$a \in (Z_{n}^{*})^{m}$$. <br>
+
+An integer is called a **quadratic residue modulo** n if $$gcd(a,n) = 1$$ and $$a \equiv b^{2} \pmod{n}$$ for some integer b; in this case, we say that b is a **square root of a modulo n**.
+
+### 2) Quadratic residues modulo p (p is prime) ###
+
+#### Theorem 1 ####
+
+Let p be an odd prime. Then $$\mid(Z_p^*)^2\mid = (p-1)/2$$.
+
+#### Euler's criterion ####
+
+Let p be an odd prime and $$a \in Z_p^*$$.
+
+- $$ a^{(p-1)/2} = \pm 1$$.
+- If $$ a \in (Z_p^*)^2$$ then $$a^{(p-1)/2} = 1$$.
+- If $$a \notin (Z_p^*)^2$$ then $$a^{(p-1)/2}= -1$$.
+
+#### Wilson's theorem ####
+
+Let p be a prime. Then $$(p-1)! \equiv -1 \pmod{p}$$. For detail, a natural number n > 1 is a prime number if and only if the product of all the positive integers less than n is one less than a multiple of n.
+
+#### Quadratic properties ####
+
+|a|b|a x b|
+|-|-|-|
+|Quadratic residue|Quadratic residue| Quadratic residue|
+|Quadratic residue|Quadratic non-residue| Quadratic non-residue|
+|Quadratic non-residue|Quadratic non-residue| Quadratic residue|
+
+###
+
+
+
+ 
 
 
 
