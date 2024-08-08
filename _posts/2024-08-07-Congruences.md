@@ -165,6 +165,12 @@ So with modulo 7 we have: 1 has order 1; 6 has order 2; 3 has order 6; 2,4,5 hav
 ### 2) Euler's theorem ###
 Let n be a positive integer and $a \in Z_n^*$. Then: $a^{\phi(n)} = 1$.In particular, the multiplicative order of a devides $\phi(n)$.
 
+### 3) Fermat's little theorem ###
+
+For every prime p,and every $a \in Z_p^*$, we have: $a^{p} = a$. <br>
+
+
+
 
 
 
