@@ -123,7 +123,7 @@ Equivalently, $\phi(n)$ is the number of positive integers less than n that are 
 **Example:** $\phi(8) = 4$ because the positive integers less than 8 that are relatively prime to 8 are 1,3,5,7. <br>
 
 ### 2) Theorem 1 ###
-Let $(n_i)_{i = 1}^{k}$ be a family of positive integers that are pairwise relatively prime, and let $n = \prod_{i = 1}^{k} n_i$. Then:
+Let $(n_i)_{i=1}^{k}$ be a family of positive integers that are pairwise relatively prime, and let $n = \prod_{i=1}^{k}n_i$. Then:
 
 $$\phi(n) = \prod_{i=1}^{k} \phi(n_i).$$
 
