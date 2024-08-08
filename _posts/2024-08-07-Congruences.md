@@ -111,6 +111,21 @@ $$Z_n^{*} = \{a \in Z_n | gcd(a,n) = 1\}$$
 
 If n is prime , then gcd(a,n) = 1 for a = 1,...,n - 1, and we have $Z_n^{*} = Z_n - {[0]}$.
 
+## V) Euler's phi function ##
+
+### 1) Definition ###
+
+**Euler's phi function** (also called **Euler's totient function**) is defined for all positive integers n as: <br>
+$$\phi(n) = \mid Z_n^{*}\mid$$
+
+Equivalently, $\phi(n)$ is the number of positive integers less than n that are relatively prime to n. <br>
+
+**Example:** $\phi(8) = 4$ because the positive integers less than 8 that are relatively prime to 8 are 1,3,5,7. <br>
+
+### 2) Theorem 1 ###
+Let $(n_i)_{i = 1}^{k}$ be a pairwise relatively prime family of positive integers, and let n = $\prod_{i = 1}^{k} n_i$. Then: <br>
+$$\phi(n) = \prod_{i=1}^{k} \phi(n_i).$$
+
 
 
 
