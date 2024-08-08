@@ -126,6 +126,19 @@ Equivalently, $\phi(n)$ is the number of positive integers less than n that are 
 Let $(n_i)_{i = 1}^{k}$ be a pairwise relatively prime family of positive integers, and let n = $\prod_{i = 1}^{k} n_i$. Then: <br>
 $$\phi(n) = \prod_{i=1}^{k} \phi(n_i).$$
 
+### 3) Theorem 2 ###
+Let p be a prime number and k be a positive integer. Then: <br>
+$$\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1).$$
+
+### 3) Theorem 3 ###
+
+If $n = p_1^{e1}...p_r^{er}$ is the factorization of n into prime powers, then: <br>
+$$\phi(n) = \prod_{i = 1}^{r}p_i^{e_i-1}(p_i-1) = n \prod_{i=1}^{r}(1-1/p_i)$$
+
+## VI) Euler's theorem and Fermat's little theorem ##
+
+
+
 
 
 
