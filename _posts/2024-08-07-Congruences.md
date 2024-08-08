@@ -169,6 +169,19 @@ Let n be a positive integer and $a \in Z_n^*$. Then: $a^{\phi(n)} = 1$.In partic
 
 For every prime p,and every $a \in Z_p^*$, we have: $a^{p} = a$. <br>
 
+For a given positive integer n, we say that $a \in Z$ with gcd(a,n) = 1 is a **primitive root modulo** n if the multiplicative order of a modulo n is equal to $\phi(n)$. If this is the case, then for a = [a] $\in Z_n^*$, the powers $a^i$ range over all elements of $Z_n^*$ as i ranges over all the interval 0,...,$\phi(n) - 1$. Not all positive integers have primitive roots. <br>
+
+
+### 4) Theorem 2 ###
+
+Suppose a $\in Z_n^*$ has multiplicative order k. Then for every m $\in Z$,
+the multiplicative order of $a^m$ is equal to k/gcd(k,m). <br>
+
+## VII) Quadratic residues ##
+
+
+
+
 
 
 
