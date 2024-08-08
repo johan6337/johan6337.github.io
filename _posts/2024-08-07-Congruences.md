@@ -143,6 +143,34 @@ $$a^{k} \equiv 1 \pmod{n}$$
 
 From the above discussion, we see that the first k powers of a, that is, $a^1,a^2,...,a^k$, are distinct modulo n. The next k powers of a, that is, $a^{k+1},a^{k+2},...$, are congruent to $a,a^2,...$ modulo n. <br>
 
+### 1) Theorem 1 ###
+Let n be a positive integer, and let a be an element of $Z_n^*$ of multiplicative order k. Then for every $i \in Z$, we have $a^i = 1$ if and only if $k \mid i$. <br>
+
+**Example:** Let n = 7 and a = 3. Then $Z_7^* = \{1,2,3,4,5,6\}$, and we have: <br>
+
+<div style="text-align: center;">
+
+|  i  |   1  |   2   |   3   |   4   |   5   |   6   |
+|-----|------|-------|-------|-------|-------|-------|
+|$1^i \pmod{7}$| 1 | 1 | 1 | 1 | 1 | 1 |
+|$2^i \pmod{7}$| 2 | 4 | 1 | 2 | 4 | 1 |
+|$3^i \pmod{7}$| 3 | 2 | 6 | 4 | 5 | 1 |
+|$4^i \pmod{7}$| 4 | 2 | 1 | 4 | 2 | 1 |
+|$5^i \pmod{7}$| 5 | 4 | 6 | 2 | 3 | 1 |
+|$6^i \pmod{7}$| 6 | 1 | 6 | 1 | 6 | 1 |
+
+</div>
+So with modulo 7 we have: 1 has order 1; 6 has order 2; 3 has order 6; 2,4,5 have order 3. <br>
+
+### 2) Euler's theorem ###
+Let n be a positive integer and $a \in Z_n^*$. Then: $a^{\phi(n)} = 1$.In particular, the multiplicative order of a devides $\phi(n)$.
+
+
+
+
+
+ 
+
 
 
 
