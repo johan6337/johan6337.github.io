@@ -123,9 +123,12 @@ Equivalently, $\phi(n)$ is the number of positive integers less than n that are 
 **Example:** $\phi(8) = 4$ because the positive integers less than 8 that are relatively prime to 8 are 1,3,5,7. <br>
 
 ### 2) Theorem 1 ###
-Let $(n_i)_{i=1}^{k}$ be a family of positive integers that are pairwise relatively prime, and let $n = \prod_{i=1}^{k}n_i$. Then:
+
+Let $${n_i}_{i=1}^{k}$$ be a family of positive integers that are pairwise relatively prime, and let $$n = \prod_{i=1}^{k} n_i$$. Then:
 
 $$\phi(n) = \prod_{i=1}^{k} \phi(n_i).$$
+
+
 
 ### 3) Theorem 2 ###
 Let p be a prime number and k be a positive integer. Then: <br>
@@ -138,7 +141,8 @@ $$\phi(n) = \prod_{i = 1}^{r}p_i^{e_i-1}(p_i-1) = n \prod_{i=1}^{r}(1-1/p_i)$$
 
 ## VI) Euler's theorem and Fermat's little theorem ##
 
-If $a = [a]$ with $a \in Z_n^{*}$ (and gcd(a,n) = 1, since $a \in Z_n^*$), then k is also called the multiplicative order of a modulo n, such that:
+If $$a = [a]$$ with $$a \in Z_n^{*}$$ (and gcd(a,n) = 1, since $$a \in Z_n^*$$), then k is also called the multiplicative order of a modulo n, such that:
+
 $$a^{k} \equiv 1 \pmod{n}$$
 
 From the above discussion, we see that the first k powers of a, that is, $a^1,a^2,...,a^k$, are distinct modulo n. The next k powers of a, that is, $a^{k+1},a^{k+2},...$, are congruent to $a,a^2,...$ modulo n. <br>
@@ -148,7 +152,7 @@ Let n be a positive integer, and let a be an element of $Z_n^*$ of multiplicativ
 
 **Example:** Let n = 7 and a = 3. Then $Z_7^* = \{1,2,3,4,5,6\}$, and we have: <br>
 
-<div style="text-align: center;">
+ 
 
 |  i  |   1  |   2   |   3   |   4   |   5   |   6   |
 |-----|------|-------|-------|-------|-------|-------|
@@ -159,7 +163,7 @@ Let n be a positive integer, and let a be an element of $Z_n^*$ of multiplicativ
 |$5^i \pmod{7}$| 5 | 4 | 6 | 2 | 3 | 1 |
 |$6^i \pmod{7}$| 6 | 1 | 6 | 1 | 6 | 1 |
 
-</div>
+ 
 So with modulo 7 we have: 1 has order 1; 6 has order 2; 3 has order 6; 2,4,5 have order 3. <br>
 
 ### 2) Euler's theorem ###
@@ -169,7 +173,7 @@ Let n be a positive integer and $a \in Z_n^*$. Then: $a^{\phi(n)} = 1$.In partic
 
 For every prime p,and every $a \in Z_p^*$, we have: $a^{p} = a$. <br>
 
-For a given positive integer n, we say that $a \in Z$ with gcd(a,n) = 1 is a **primitive root modulo** n if the multiplicative order of a modulo n is equal to $\phi(n)$. If this is the case, then for a = [a] $\in Z_n^*$, the powers $a^i$ range over all elements of $Z_n^*$ as i ranges over all the interval 0,...,$\phi(n) - 1$. Not all positive integers have primitive roots. <br>
+For a given positive integer n, we say that $$a \in Z$$ with gcd(a,n) = 1 is a **primitive root modulo** n if the multiplicative order of a modulo n is equal to $$\phi(n)$$. If this is the case, then for a = [a] $$\in Z_n^*$$, the powers $$a^i$$ range over all elements of $$Z_n^*$$ as i ranges over all the interval 0,...,$$\phi(n) - 1$$. Not all positive integers have primitive roots. <br>
 
 
 ### 4) Theorem 2 ###
