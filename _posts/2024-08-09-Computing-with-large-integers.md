@@ -11,4 +11,6 @@ mermaid: true
 
 ## I) Asymptotic Notations ##
 
-- $f = O(g)$ if there exists a constant $c > 0$ such that $|f(n)| \leq c|g(n)|$ for all $n > n_0$.
+Let f and g be real-valued functions. Then:
+- $f = O(g)$ if there exists a constant $c > 0$ such that $\midf(x)\mid \leq cg(x)|$ for some positive constant c and sufficiently large x("f is big-0 of g").
+-
