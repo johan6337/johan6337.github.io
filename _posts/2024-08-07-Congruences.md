@@ -241,3 +241,11 @@ Let p be a prime with $$p \equiv 1 \pmod 4$$, $$y \in Z_{p}^{*} \setminus {Z_{p}
 
 Let p be an odd prime. Then $p = r^2 + s^2$ for some integers r and s if and only if $p \equiv 1 \pmod 4$.
 
+
+## VIII) Summations over divisors ##
+
+The **Dirichlet product** of f and g, denoted by $$f \star g$$, is the arithmetic function defined by $$(f \star g)(n) = \sum_{d \mid n} f(d)g(n/d)$$,
+
+Another way to write this is:
+$$(f \star g)(n) = \sum_{n = {d_1}{d_2}} f(d_1)g(d_2)$$,
+the sum being over all pairs (d1,d2) of positive integers whose product is n.
