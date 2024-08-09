@@ -255,9 +255,17 @@ the sum being over all pairs (d1,d2) of positive integers whose product is n.
 
 **Some special function:**
 
-- The **identity function** I is defined by $I(n) = 1$ for all n.
-- The **unit function** is defined by:
-$$\epsilon(n) = \begin{cases} 1 & \text{if } n = 1 \\ 0 & \text{if } n > 1 \end{cases}$$
+- The **unit function** is defined by $I(n) = 1$ for all n.
+- The **identity function** is defined by:
+$$\varepsilon(n) = \begin{cases} 1 & \text{if } n = 1 \\ 0 & \text{if } n > 1 \end{cases}$$ 
 
-- The **Möbius function** is defined as follows: if $$n = {p_1}^{e_1}...{p_r}^{e_r}$$ is the factorization of n into prime powers, then:
+- The **Möbius function** is defined as follows: if $$n = {p_1}^{e_1}...{p_r}^{e_r}$$ is the factorization of n into distinct prime powers, then:
 $$\mu(n) = \begin{cases} 1 & \text{if } n = 1 \\ (-1)^r & \text{if } n \text{ is square-free} \\ 0 & \text{if } n \text{ has a squared prime factor} \end{cases}$$
+
+**Note**: The unit function is the multiplicative inverse of the Möbius function with respect to the Dirichlet product. That is: $$\mu \star \varepsilon = I$$.
+
+**Note**: An arithmetic function f is called **multiplicative** if f(1) = 1 and f(mn) = f(m)f(n) whenever gcd(m,n) = 1. EX: Euler's phi function,...
+
+### 1) Theorem 1 ###
+
+If f is a multiplicative arithmetic function, and if $ n = {p_1}^{e_1}...{p_r}^{e_r}$ is the factorization of n into prime powers, then $$f(n) = f({p_1}^{e_1})...f({p_r}^{e_r})$$.
