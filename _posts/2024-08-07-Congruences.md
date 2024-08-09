@@ -268,4 +268,8 @@ $$\mu(n) = \begin{cases} 1 & \text{if } n = 1 \\ (-1)^r & \text{if } n \text{ is
 
 ### 1) Theorem 1 ###
 
-If f is a multiplicative arithmetic function, and if $ n = {p_1}^{e_1}...{p_r}^{e_r}$ is the factorization of n into prime powers, then $$f(n) = f({p_1}^{e_1})...f({p_r}^{e_r})$$.
+If f is a multiplicative arithmetic function, and if $ n = {p_1}^{e_1}...{p_r}^{e_r}$ is the factorization of n into prime powers, then $$f(n) = f({p_1}^{e_1})...f({p_r}^{e_r})$$ [^1].
+
+## References
+
+[^1]: Victor Shoup, *A Computational Introduction to Number Theory and Algebra*, version 2.
