@@ -241,7 +241,6 @@ Let p be a prime with $$p \equiv 1 \pmod 4$$, $$y \in Z_{p}^{*} \setminus {Z_{p}
 
 Let p be an odd prime. Then $p = r^2 + s^2$ for some integers r and s if and only if $p \equiv 1 \pmod 4$.
 
-
 ## VIII) Summations over divisors ##
 
 The **Dirichlet product** of f and g, denoted by $$f \star g$$, is the arithmetic function defined by $$(f \star g)(n) = \sum_{d \mid n} f(d)g(n/d)$$,
@@ -249,3 +248,16 @@ The **Dirichlet product** of f and g, denoted by $$f \star g$$, is the arithmeti
 Another way to write this is:
 $$(f \star g)(n) = \sum_{n = {d_1}{d_2}} f(d_1)g(d_2)$$,
 the sum being over all pairs (d1,d2) of positive integers whose product is n.
+
+**Some properties of the Dirichlet product:**
+- Commutative : $$f \star g = g \star f$$
+- Associative : $$(f \star g) \star h = f \star (g \star h)$$
+
+**Some special function:**
+
+- The **identity function** I is defined by $I(n) = 1$ for all n.
+- The **unit function** is defined by:
+$$\epsilon(n) = \begin{cases} 1 & \text{if } n = 1 \\ 0 & \text{if } n > 1 \end{cases}$$
+
+- The **Möbius function** is defined as follows: if $$n = {p_1}^{e_1}...{p_r}^{e_r}$$ is the factorization of n into prime powers, then:
+$$\mu(n) = \begin{cases} 1 & \text{if } n = 1 \\ (-1)^r & \text{if } n \text{ is square-free} \\ 0 & \text{if } n \text{ has a squared prime factor} \end{cases}$$
