@@ -223,32 +223,21 @@ Let p be a prime. Then $$(p-1)! \equiv -1 \pmod{p}$$. For detail, a natural numb
 |Quadratic residue|Quadratic non-residue| Quadratic non-residue|
 |Quadratic non-residue|Quadratic non-residue| Quadratic residue|
 
-###
+### 3) Quadratic residues modulo $p^e$ ###
 
+All properties and theorem is compatible with the case of p is prime.
 
+### 3) Square roots of -1 modulo p ###
 
- 
+#### Theorem 1 ####
 
+Let p be an odd prime. Then -1 is a quadratic residue modulo p if and only if $p \equiv 1 \pmod 4$
 
+#### Theorem 2 ####
 
+Let p be a prime with $$p \equiv 1 \pmod 4$$, $$y \in Z_{p}^{*} \setminus {Z_{p}^{*}}^{2} $$, and $$b = y^{(p-1)/4}$$. Then $b^2 = -1$.
 
+#### Fermat's two squares theorem ####
 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Let p be an odd prime. Then $p = r^2 + s^2$ for some integers r and s if and only if $p \equiv 1 \pmod 4$.
 
