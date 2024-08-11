@@ -60,6 +60,7 @@ $M \equiv (a_1.M_1.M_1^{-1} + a_2.M_2.M_2^{-1} + ... + a_n.M_n.M_n^{-1}) \pmod{M
 - $M_1.M_1^{-1} \equiv 1 \pmod{m_1}$  
 
 **Example : Solve the following system of congruences:**
+
 $X \equiv 2 \pmod{3}$ <br>
 $X \equiv 3 \pmod{5}$ <br>
 $X \equiv 2 \pmod{7}$ <br>
