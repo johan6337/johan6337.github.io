@@ -89,4 +89,54 @@ def Extended_Euclidean_algorithm(a,b):
     return d,s,t
 ```
 
+## III) Computing modular inverses and Chinese remaindering ##
 
+**Modular inverses**: 
+
+```python
+def inverse(a,n):
+    d,s,t = Extended_Euclidean_algorithm(n,a)
+    if d != 1:
+        return None
+    else:
+        return  t % n
+```
+
+**Chinese remaindering**: 
+
+```python
+def Chinese_Remainder_Theorem(a,n):
+    e = []
+    N = 1
+    for i in n:
+        N *= i
+    for i in range(len(n)):
+        n_1 = N/n[i]
+        t_1 = inverse(n_1,n[i])
+        e.append(n_1*t_1)
+    sum = 0
+    for i in range(len(n)):
+        sum += a[i]*e[i]
+    return sum % N
+```
+
+## IV) An effective version of Fermat's two square theorem ##
+
+Given a prime p and $$p \equiv 1 \pmod 4$$ , a "Trial and Error" algorithm can be used to find a interger a such that $$a^2 \equiv -1 \pmod p$$.
+
+```python
+def trial_and_error(p):
+    for a in range(1, p):
+        b = a**((p-1)//4)
+        if b**2 % p == p - 1:
+            return b % p
+```
+
+**Reminder**: Fermat's two square theorem states that a prime p can be written as the sum of two squares if and only if $$p \equiv 1 \pmod 4$$ that $$p = r^2 + t^2$$.
+
+A efficient algorithm to find r and t is the following:
+
+- find a such that $$a^2 \equiv -1 \pmod p$$ by the trial and error algorithm.
+- Find smallest j index in $$r_j$$ such that $$ r_j \leq \lfloor \sqrt p \rfloor + 1$$ and then we have r and t that satisfied the theorem.
+
+**Example**: 

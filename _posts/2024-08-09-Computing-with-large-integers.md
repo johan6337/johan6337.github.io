@@ -38,3 +38,7 @@ Let a and b be arbitrary integers.
 - We can compute $a \pm b$ in $$O(\text{len}(a) + \text{len}(b))$$.
 - We can compute $a.b$ in $$O(\text{len}(a).\text{len}(b))$$.
 - If $b \neq 0$, we can compute the quotient q = $$\lfloor a/b \rfloor$$ and the remainder r = $$a \mod b$$ in $$O(\text{len}(a).\text{len}(b))$$.
+
+## References
+
+1.Victor Shoup, *A Computational Introduction to Number Theory and Algebra*, version 2.
