@@ -139,4 +139,27 @@ A efficient algorithm to find r and t is the following:
 - find a such that $$a^2 \equiv -1 \pmod p$$ by the trial and error algorithm.
 - Find smallest j index in $$r_j$$ such that $$ r_j \leq \lfloor \sqrt p \rfloor + 1$$ and then we have r and t that satisfied the theorem.
 
-**Example**: 
+**Example**: Let p = 109. Then let find r and t :
+
+Step 1: choosing a such that $$a^2 \equiv -1 \pmod p$$ by the trial and error algorithm. Then we have a = 33.
+
+Step 2: Compute c = $$\lfloor \sqrt p \rfloor + 1 = 11$$
+
+Step 3: Compute the Eucledean algorithm for 109 and 33. Then we have:
+
+| i  | $r_i$ | $q_i$ | $s_i$ | $t_i$ |
+|----|-----|-----|-----|-----|
+| 0  | 109 |     | 1   | 0   |
+| 1  | 33  | 3   | 0   | 1   |
+| 2  | 10  | 3   | 1   | -3  |
+| 3  | 3   | 3   | -3  | -8  |
+| 4  | 1   | 3   | 10  | -27 |
+| 5  | 0   |     | -33 | 262 |
+
+Observe that the smallest j index whose r < c is 2. Then r = 10 and t = -3. So we have $$109 = 10^2 + (-3)^2$$.
+
+
+## V) Applications of the Euclidean algorithm ##
+
+### 1) Recover fraction from their decimal expansions ###
+
