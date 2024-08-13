@@ -158,8 +158,4 @@ Step 3: Compute the Eucledean algorithm for 109 and 33. Then we have:
 
 Observe that the smallest j index whose r < c is 2. Then r = 10 and t = -3. So we have $$109 = 10^2 + (-3)^2$$.
 
-
-## V) Applications of the Euclidean algorithm ##
-
-### 1) Recover fraction from their decimal expansions ###
-
+ 
