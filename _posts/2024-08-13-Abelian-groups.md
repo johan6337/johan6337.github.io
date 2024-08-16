@@ -51,8 +51,49 @@ Let G be an abelian group with binary operation $\star$. Then we have:
 
 11. The set of alll finite bit strings under concatenation is **not an abelian group** with empty string being the identity and no string having an inverse (except for the empty string).
 
-12. The set of $2 x 2$ integer matrices with determinant $\pm 1$ under matrix multiplication is **not an abelian group**. Since matrix multiplication is not commutative.
+12. The set of $2 \times 2$ integer matrices with determinant $\pm 1$ under matrix multiplication is **not an abelian group**. Since matrix multiplication is not commutative.
 
 
 
 ### Theorem 2 ###
+Let G be an abelian group. Then for all a,b,c $\in G$, we have:
+- if a + b = a + c, then b = c.
+- the equation a + x = b has a unique solution for all a,b $\in G$.
+- -(a + b) = (-a) + (-b) for all a,b $\in G$.
+- -(-a) = a for all a $\in G$.
+
+### Theorem 3 ###
+Let G be an abelian group. Then for all a,b $\in G$ and k,l $\in \mathbb{Z}$, we have:
+- k(la) = (kl)a = l(ka).
+- (k + l)a = ka + la.
+- k(a + b) = ka + kb.
+
+
+### Group's order ###
+
+A group is called trivial if it only contain 1 element that is the indentity. An abelian group G is called finite if it contains a finite number of elements. The number of elements in G is called the order of G and is denoted by $\mid G \mid$.
+
+**Example 1**: The order of the addtitive group $\mathbb{Z}_n$ is n. Iff n = 1, then $\mathbb{Z}_n$ is trivial.
+
+**Example 2**: The order of the multiplicative group $\mathbb{Z}_n^{*}$ is $\phi(n)$, where $\phi(n)$ is the Euler's totient function.
+
+**Example 3**: The additive group of integers $\mathbb{Z}$ is infinite.
+
+## II) Subgroups ##
+
+### Definition ###
+
+Let G be an abelian group, and let H be a non-empty subset of G such that:
+
+- a + b $\in H$ for all a,b $\in H$.
+- a $\in H$ implies -a $\in H$.
+
+Then H is called a subgroup of G, denoted by H $\leq$ G.
+
+### Theorem 1 ###
+
+
+
+
+
+ 
