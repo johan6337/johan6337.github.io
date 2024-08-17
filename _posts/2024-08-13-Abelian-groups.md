@@ -93,7 +93,16 @@ Then H is called a subgroup of G, denoted by H $\leq$ G.
 ### Theorem 1 ###
 
 
+If $H_1$ and $H_2$ are subgroups of G, then so is:
+<div style="text-align: center;">
+$$
+H_1 + H_2 = \{a + b : a \in H_1, b \in H_2\}
+$$
+</div>
 
+### Theorem 2 ###
 
+If $H_1$ and $H_2$ are subgroups of G, then so is $H_1 \cap H_2$
 
- 
+## III) Cosets and quotient groups ##
+

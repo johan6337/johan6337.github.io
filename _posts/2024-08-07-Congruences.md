@@ -33,6 +33,7 @@ Let a,a',b,b' be integers and m be a positive integer. If $a \equiv a' \pmod{m}$
 
 ### 1)Theorem 1 ###
 
+Let $a,n \in Z$ with n > 0, and let d = gcd(a,n):
 1. Let $az \equiv b \pmod{n} $ has a solution if and only if $d \mid b$.
 2. Let $az \equiv 0 \pmod{n} $ if and only if $z \equiv 0 \pmod{n/d}$.
 3. For all $z,z' \in \mathbb{Z}$, we have $az \equiv az' \pmod{n}$ if and only if $z \equiv z' \pmod{n/d}$.
