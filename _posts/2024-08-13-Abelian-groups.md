@@ -106,3 +106,31 @@ If $H_1$ and $H_2$ are subgroups of G, then so is $H_1 \cap H_2$
 
 ## III) Cosets and quotient groups ##
 
+### Definition ###
+- Let G be an abelian group and H a subgroup of G. For all $a \in G$, the set $a + H$ = {$a + h : h \in H$} is called the **coset** of H in G containing a.
+
+- The set of all cosets of H in G is denoted by G/H. The number of cosets of H in G is denoted by [G:H]. Then G/H = {$a + H : a \in G$}. And G/H called the **quotient group** of G by H.
+
+### Theorem 1 ###
+
+Let G be an abelian group and H a subgroup of G. For all $a,b,c \in G$,we have:
+- $a \equiv a \pmod{H}$.
+- If $a \equiv b \pmod{H}$, then $b \equiv a \pmod{H}$.
+- If $a \equiv b \pmod{H}$ and $b \equiv c \pmod{H}$, then $a \equiv c \pmod{H}$.
+
+### Theorem 2 ###
+
+Every 2 cosets of H in G have the same cardinality.
+
+### Lagrange's theorem ###
+
+If G is a finite abelian group and H is a subgroup of G, then the order of H divides the order of G.
+
+### Theorem 3 ###
+
+Let G be an abelian group and H a subgroup of G. Then the set of cosets of H in G forms a partition of G.
+
+### Theorem 4 ###
+
+Suppose G is a finite abelian group and H is a subgroup of G. Then [G:H] = $\frac{\mid G \mid}{\mid H \mid}$. Where [G:H] is the number of cosets of H in G. 
+
