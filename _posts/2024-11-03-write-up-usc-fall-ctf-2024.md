@@ -9,7 +9,7 @@ math: true
 mermaid: true
 ---
 
-In this CTF, i solved 2/4 chals which is some basic theorem in RSA and Diffie-Hellman but there something new to me. That confused me a little bit in coding the sol chals(i know the theory but i am so noob at coding SAGE lol).
+In this CTF, i solved 2/4 chals which is some basic theorem in RSA and Diffie-Hellman but there something new to me. That confused me a little bit in coding the sol chals(i know the theory but i am so noob at coding SAGE lol.)
 
 ## D' LO ##
 
