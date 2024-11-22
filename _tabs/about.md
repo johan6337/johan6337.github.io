@@ -12,7 +12,7 @@ I created this blog to share my write-ups, my journey, and my knowledge in the C
 
 # Achivement
 
-Nothing yet but hope to fill this category soon 💪💪💪
+- **Silver Medal** in the International Olympiad in Cryptography NSUCRYPTO 2024 
 
 
  
