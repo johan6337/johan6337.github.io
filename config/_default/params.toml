@@ -1,0 +1,104 @@
+# 
+
+colorScheme = "github" # autumn,avocado,bloody,blowfish,congo,fire,forest,github,marvel,neon,noir,one-light,princess,slate,terminal
+defaultAppearance = "light"
+autoSwitchAppearance = true
+enableA11y = false # Nên để true nếu bạn quan tâm đến chuẩn web (người khiếm thị)
+enableSearch = true
+searchMode = "modal"
+enableCodeCopy = true
+enableStructuredBreadcrumbs = true # [ĐÃ SỬA] Nên bật để tốt cho SEO
+mainSections = ["blog", "writeup"]
+replyByEmail = false
+disableImageOptimization = false
+disableTextInHeader = false
+hotlinkFeatureImage = false
+defaultBackgroundImage = "img/web-background.png"
+
+[header]
+layout = "fixed" # Hoặc đổi thành "fixed" nếu muốn thanh menu luôn dính trên cùng khi cuộn
+
+[footer]
+showMenu = true
+showCopyright = true
+showThemeAttribution = true
+showAppearanceSwitcher = true
+showScrollToTop = true
+
+[homepage]
+layout = "background" # [ĐÃ SỬA] Blowfish không có layout "Blogs", nên dùng "background" hoặc "profile" sẽ đẹp hơn.
+showRecent = true
+showRecentItems = 5
+showMoreLink = true
+showMoreLinkDest = "/blog/"
+cardView = true
+cardViewScreenWidth = false
+layoutBackgroundBlur = true
+disableHeroImageFilter = false
+
+[article]
+showDate = true
+showViews = false
+showLikes = false
+showDateUpdated = true # [ĐÃ SỬA] Nên bật để người đọc biết bài viết còn mới hay không
+showAuthor = true
+showHero = true
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true # [ĐÃ SỬA] Giúp điều hướng tốt hơn
+showDraftLabel = true
+showEdit = false
+editAppendPath = true
+seriesOpened = true # [ĐÃ SỬA] Nếu có viết bài nhiều phần (series) thì nên mở sẵn danh sách
+showHeadingAnchors = true
+showPagination = true
+invertPagination = false
+showReadingTime = false
+showTableOfContents = true # [ĐÃ SỬA] Cực kỳ quan trọng cho Writeup/Blog dài
+showTaxonomies = true # [ĐÃ SỬA] Hiện Tags/Categories ở cuối bài
+showCategoryOnly = false # [ĐÃ SỬA] Nên hiện cả Tags nữa
+showAuthorsBadges = false
+showWordCount = false # Tắt đi cho đỡ rối, ReadingTime là đủ rồi
+showZenMode = false
+
+[list]
+showHero = false
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true # [ĐÃ SỬA]
+showSummary = true # [ĐÃ SỬA] Nên hiện đoạn tóm tắt ngắn
+showViews = false
+showLikes = false
+showTableOfContents = false
+showCards = true # [ĐÃ SỬA] Trang chủ đã dùng Card thì trang List cũng nên dùng Card cho đồng bộ
+orderByWeight = false
+groupByYear = false # [ĐÃ SỬA] Nếu để Card view thì tắt gom nhóm theo năm nhìn sẽ thoáng hơn
+cardView = true # [ĐÃ SỬA] Bật lên cho đẹp
+cardViewScreenWidth = false
+constrainItemsWidth = false
+
+[sitemap]
+excludedKinds = [ "taxonomy", "term" ]
+
+[taxonomy]
+showTermCount = true
+showHero = false
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true
+showViews = false
+showLikes = false
+showTableOfContents = false
+cardView = true # [ĐÃ SỬA] Danh sách tags dạng thẻ nhìn đẹp hơn dạng list
+
+[term]
+showHero = false
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true
+showViews = false
+showLikes = false
+showTableOfContents = false
+groupByYear = false
+cardView = true # [ĐÃ SỬA]
+cardViewScreenWidth = false

@@ -1,0 +1,18 @@
+{{/* Custom favicons */}}
+{{ $favicon := resources.Get "img/sad-horse-removebg-preview.png" }}
+
+{{ if $favicon }}
+  {{ $apple := $favicon.Resize "180x180" }}
+  {{ $icon32 := $favicon.Resize "32x32" }}
+  {{ $icon16 := $favicon.Resize "16x16" }}
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ $apple.RelPermalink }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ $icon32.RelPermalink }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ $icon16.RelPermalink }}">
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+{{ else }}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+{{ end }}

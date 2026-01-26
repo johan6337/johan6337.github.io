@@ -1,0 +1,126 @@
+/* 3. Hiệu ứng khi di chuột vào bài viết (Hover) */
+.article-link:hover, .card:hover {
+    transform: translateY(-5px); /* Nổi lên một chút */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Đổ bóng đậm hơn */
+    border-color: var(--color-primary-500); /* Viền đổi màu theo màu chủ đạo */
+}
+
+/* 4. Đổi thanh cuộn (Scrollbar) cho đẹp */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary-500);
+    border-radius: 4px;
+}
+
+/* 5. Tăng kích thước logo ở header */
+.main-menu .logo svg,
+.main-menu img.logo {
+    width: 90px;
+    height: 90px;
+}
+
+/* 6. Làm đẹp chữ tiêu đề ở header */
+.main-menu > a.text-base {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+}
+
+/* 7. Dịch background homepage sang phải một chút */
+#background-image {
+    object-position: 15% center;
+}
+
+/* 8. Bản đồ quốc gia đã tham quan - Bigger & Better */
+.visited-map {
+    width: 100%;
+    height: 700px;
+    min-height: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(17, 24, 39, 0.4);
+    position: relative;
+}
+
+/* Responsive map height */
+@media (max-width: 1024px) {
+    .visited-map {
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .visited-map {
+        height: 500px;
+    }
+}
+
+@media (max-width: 640px) {
+    .visited-map {
+        height: 400px;
+    }
+}
+
+/* Zoom buttons styling */
+.jvm-zoom-btn {
+    background: rgba(56, 189, 248, 0.9) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.jvm-zoom-btn:hover {
+    background: rgba(14, 165, 233, 1) !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.jvm-zoom-btn:active {
+    transform: scale(0.95) !important;
+}
+
+/* Zoom button container positioning */
+.jvm-zoom {
+    position: absolute !important;
+    right: 20px !important;
+    top: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    z-index: 10 !important;
+}
+
+/* Tooltip styling */
+.jvm-tooltip {
+    font-size: 0.85rem;
+    background: rgba(17, 24, 39, 0.95) !important;
+    border: 1px solid rgba(56, 189, 248, 0.5) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    color: white !important;
+}
+
+/* Map container */
+.jvm-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* SVG styling for better visibility */
+.jvm-container svg {
+    width: 100% !important;
+    height: 100% !important;
+}

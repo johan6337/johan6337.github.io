@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AES on The saddest horse</title>
+    <link>http://localhost:1313/categories/aes/</link>
+    <description>Recent content in AES on The saddest horse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 h4n13</copyright>
+    <atom:link href="http://localhost:1313/categories/aes/index.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>

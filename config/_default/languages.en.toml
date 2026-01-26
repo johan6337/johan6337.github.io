@@ -1,0 +1,22 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "The Sad Horse"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "img/sad-horse-removebg-preview.png"
+
+[params.author]
+name = '''h4n13'''
+image = "img/sad-horse.png"
+headline = "Life Shjt 🚬"
+bio = "This is my personal blog where I share cryptography posts and CTF write-ups. I'm also learning about Web Exploitation (just start recently)."
+links = [
+  { twitter = "https://x.com/chunguabuon" },
+  { telegram = "https://t.me/vanhoang37123" },
+]

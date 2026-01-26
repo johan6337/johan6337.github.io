@@ -1,0 +1,43 @@
+ 
+# Write up
+[[main]]
+name = "Writeups"
+pageRef = "writeup"
+identifier = "E2MNe2SQwl"
+weight = 9_999
+#--------------------------
+
+[[main]]
+name = "About Me"
+pageRef = "profile"
+weight = 10_000
+#--------------------------
+
+# Blog menu
+[[main]]
+name = "Blogs"
+weight = 20
+
+
+[[main]]
+name = "Symmetric Cipher"
+parent = "Blogs"
+weight = 20
+pageRef = "blog/symmetric-cipher"
+ 
+# -------------------------
+
+#Author
+
+#----------------------------
+
+
+#Navigation
+[[subnavigation]]
+  name = "Categories"
+  pageRef = "categories"
+  weight = 30
+#-------------------------
+
+[[footer]]
+none = "none"

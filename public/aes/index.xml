@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AESes on The saddest horse</title>
+    <link>http://localhost:1313/aes/</link>
+    <description>Recent content in AESes on The saddest horse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 h4n13</copyright>
+    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:1313/aes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello world</title>
+      <link>http://localhost:1313/aes/init/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0700</pubDate>
+      
+      <guid>http://localhost:1313/aes/init/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

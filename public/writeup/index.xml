@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writeups on The Sad Horse</title>
+    <link>http://localhost:1313/writeup/</link>
+    <description>Recent content in Writeups on The Sad Horse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 h4n13</copyright>
+    <lastBuildDate>Sat, 24 Jan 2026 12:16:00 +0700</lastBuildDate><atom:link href="http://localhost:1313/writeup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello Worldaa</title>
+      <link>http://localhost:1313/writeup/hello-world/</link>
+      <pubDate>Sat, 24 Jan 2026 12:16:00 +0700</pubDate>
+      
+      <guid>http://localhost:1313/writeup/hello-world/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeup/hello-world/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
