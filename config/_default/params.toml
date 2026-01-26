@@ -43,6 +43,7 @@ showLikes = true
 showDateUpdated = true # [ĐÃ SỬA] Nên bật để người đọc biết bài viết còn mới hay không
 showAuthor = true
 showHero = true
+heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = true # [ĐÃ SỬA] Giúp điều hướng tốt hơn
