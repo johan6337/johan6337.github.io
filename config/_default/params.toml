@@ -38,8 +38,8 @@ disableHeroImageFilter = false
 
 [article]
 showDate = true
-showViews = false
-showLikes = false
+showViews = true
+showLikes = true
 showDateUpdated = true # [ĐÃ SỬA] Nên bật để người đọc biết bài viết còn mới hay không
 showAuthor = true
 showHero = true
@@ -102,3 +102,11 @@ showTableOfContents = false
 groupByYear = false
 cardView = true # [ĐÃ SỬA]
 cardViewScreenWidth = false
+
+[firebase]
+apiKey = "AIzaSyDYl_liOBZLzKdiRD5mimE0B3fA4R0qXRE"
+authDomain = "the-sad-horse.firebaseapp.com"
+projectId = "the-sad-horse"
+storageBucket = "the-sad-horse.firebasestorage.app"
+messagingSenderId = "360137054761"
+appId = "1:360137054761:web:8a0e5865ca49f325669a38"

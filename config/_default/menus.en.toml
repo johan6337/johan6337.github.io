@@ -24,6 +24,12 @@ name = "Symmetric Cipher"
 parent = "Blogs"
 weight = 20
 pageRef = "blog/symmetric-cipher"
+
+[[main]]
+name = "RSA"
+parent = "Blogs"
+weight = 20
+pageRef = "blog/rsa"
  
 # -------------------------
 

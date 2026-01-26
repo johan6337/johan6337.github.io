@@ -252,6 +252,29 @@
 
   
   
+    
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDYl_liOBZLzKdiRD5mimE0B3fA4R0qXRE",
+      authDomain: "the-sad-horse.firebaseapp.com",
+      projectId: "the-sad-horse",
+      storageBucket: "the-sad-horse.firebasestorage.app",
+      messagingSenderId: "360137054761",
+      appId: "1:360137054761:web:8a0e5865ca49f325669a38",
+      measurementId:  null 
+    };
+
+        var app = firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        var auth = firebase.auth();
+
+      </script>
+    
+  
 
   
   
@@ -360,6 +383,17 @@
       <div class="menuhide">
         <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
           <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/blog/rsa/"
+                
+                aria-label="RSA"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="RSA">
+                  RSA
+                </span>
+              </a>
             
               <a
                 href="/blog/symmetric-cipher/"
@@ -546,6 +580,17 @@
           class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
           <div class="overflow-hidden">
             <div class="ms-7 mt-4">
+              
+                <a
+                  href="/blog/rsa/"
+                  aria-label="RSA"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="RSA" class="text-lg">
+                    RSA
+                  </span>
+                </a>
               
                 <a
                   href="/blog/symmetric-cipher/"
@@ -787,348 +832,6 @@
 
 
 <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-  
-    
-
-
-
-
-
-
-  
-  
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-
-    
-    
-      
-        
-        
-          
-        
-      
-    
-  
-
-
-
-<article
-  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-    <div class="flex-none relative overflow-hidden thumbnail_card">
-      <img
-        src="/writeup/hello-world/featured_hu_d3eceeb44921c12e.png"
-        role="presentation"
-        loading="lazy"
-        decoding="async"
-        class="not-prose absolute inset-0 w-full h-full object-cover">
-    </div>
-  
-  
-  <div class="p-4">
-    <header>
-      <a
-        
-          href="/writeup/hello-world/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Hello Worldaa
-          
-        </h2>
-      </a>
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-        
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2026-01-24T12:16:00&#43;07:00">24 January 2026</time>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-    </div>
-  
-
-  
-  
-
-
-
-      
-    </div>
-    
-      <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1 line-clamp-3">
-        This is my first post
-      </div>
-    
-    
-      <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
-        
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-  
-    
-
-
-
-
-
-
-  
-  
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-
-    
-    
-      
-        
-        
-          
-        
-      
-    
-  
-
-
-
-<article
-  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-    <div class="flex-none relative overflow-hidden thumbnail_card">
-      <img
-        src="/blog/symmetric-cipher/aes/featured_hu_d3eceeb44921c12e.png"
-        role="presentation"
-        loading="lazy"
-        decoding="async"
-        class="not-prose absolute inset-0 w-full h-full object-cover">
-    </div>
-  
-  
-  <div class="p-4">
-    <header>
-      <a
-        
-          href="/blog/symmetric-cipher/aes/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          RSA is fun (Part 1).
-          
-        </h2>
-      </a>
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-        
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-09-11T10:16:00&#43;07:00">11 September 2024</time>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-            
-              <a class="relative mt-[0.5rem] me-2" href="/categories/rsa/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    RSA
-  </span>
-</span>
-
-              </a>
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/rsa/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    RSA
-  </span>
-</span>
-
-              </a>
-            
-          
-        
-      
-    </div>
-  
-
-  
-  
-
-
-
-      
-    </div>
-    
-      <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1 line-clamp-3">
-        An informal introduction about all kinds of RSA attacks.
-      </div>
-    
-    
-      <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
-        
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
   
 </section>
 
