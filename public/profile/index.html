@@ -374,13 +374,14 @@
       <div class="cursor-pointer flex items-center">
         <a
           
-            tabindex="0"
+            href="/blog/"
+            
           
           aria-label="Blogs"
           class="flex items-center text-base font-medium bf-icon-color-hover"
-          title="">
+          title="Blog">
           
-          <span class="text-bg font-bg break-normal" title="">
+          <span class="text-bg font-bg break-normal" title="Blog">
             Blogs
           </span>
           <span>
@@ -436,11 +437,11 @@
       
   
     <a
-      href=""
+      href="/writeup/"
       
       class="flex items-center bf-icon-color-hover"
       aria-label="Writeups"
-      title="">
+      title="Writeups">
       
       
         <span class="text-base font-medium break-normal">
@@ -564,12 +565,12 @@
     
     <div class="px-2">
       <a
-        href=""
+        href="/blog/"
         aria-label="Blogs"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="" class="text-2xl font-bold tracking-tight">
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
           Blogs
         </span>
         
@@ -632,12 +633,12 @@
     
     <div class="px-2">
       <a
-        href=""
+        href="/writeup/"
         aria-label="Writeups"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="" class="text-2xl font-bold tracking-tight">
+        <span title="Writeups" class="text-2xl font-bold tracking-tight">
           Writeups
         </span>
         
@@ -666,18 +667,6 @@
 
         
   
-    <div class="flex flex-wrap gap-4 mt-8 pt-8 border-t bf-border-color">
-      
-        <a
-          href="/categories/"
-          aria-label="Categories"
-          class="inline-flex items-center gap-2 px-2 py-2 bf-icon-color-hover rounded-full text-sm">
-          
-          <span title="Categories">Categories</span>
-        </a>
-      
-    </div>
-  
 
         
   
@@ -698,25 +687,6 @@
 </div>
 
 
-  <div
-    class="main-menu flex pb-3 flex-col items-end justify-between md:justify-start space-x-3 
-      -mt-[15px]
-    ">
-    <div class="hidden md:flex items-center space-x-5">
-      
-        <a
-          href="/categories/"
-          
-          class="flex items-center bf-icon-color-hover">
-          
-          <span class="text-xs font-light" title="Categories">
-            Categories
-          </span>
-        </a>
-      
-    </div>
-  </div>
-
 
 
 
@@ -736,6 +706,7 @@
         
   
   <section class="flex flex-col items-center justify-center text-center px-4 py-8">
+    
     <header class="relative flex flex-col items-center mb-6">
       
         
@@ -812,52 +783,69 @@
 
     <section class="mt-8 w-full max-w-7xl px-4">
       <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">Visited Countries</h2>
-      <div id="visited-map" class="visited-map"></div>
+      <div id="visited-map" class="visited-map" style="height: 500px;"></div>
     </section>
+
+    <section class="mt-12 w-full max-w-7xl px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">Vietnam Check-in</h2>
+      <div id="vietnam-map" class="visited-map" style="height: 600px;"></div>
+    </section>
+
   </section>
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world-merc.js"></script>
+  
+  <script src="/js/maps/vietnam.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var el = document.getElementById("visited-map");
-      if (!el) return;
-      new jsVectorMap({
-        selector: "#visited-map",
-        map: "world_merc",
-        zoomButtons: true,
-        zoomOnScroll: true,
-        zoomMax: 12,
-        zoomMin: 1,
-        zoomAnimate: true,
-        regionStyle: {
-          initial: { 
-            fill: "#2f3136",
-            stroke: "#1a1d21",
-            strokeWidth: 0.5
+      
+      
+      var worldEl = document.getElementById("visited-map");
+      if (worldEl) {
+        new jsVectorMap({
+          selector: "#visited-map",
+          map: "world_merc",
+          zoomButtons: true,
+          zoomOnScroll: false,
+          zoomMax: 12,
+          zoomMin: 1,
+          regionStyle: {
+            initial: { fill: "#2f3136", stroke: "#1a1d21", strokeWidth: 0.5 },
+            hover: { fill: "#4a5568", cursor: "pointer" },
+            selected: { fill: "#e11d48", stroke: "#ffffff", strokeWidth: 1 }
           },
-          hover: {
-            fill: "#4a5568",
-            cursor: "pointer"
+          selectedRegions: ["VN", "KR"], 
+        });
+      }
+
+      
+      var vnEl = document.getElementById("vietnam-map");
+      if (vnEl) {
+        new jsVectorMap({
+          selector: "#vietnam-map",
+          map: "vietnam", 
+          zoomButtons: true,
+          zoomOnScroll: false,
+          regionStyle: {
+            initial: { fill: "#2f3136", stroke: "#1a1d21", strokeWidth: 0.5 },
+            hover: { fill: "#4a5568", cursor: "pointer" },
+            selected: { fill: "#e11d48", stroke: "#ffffff", strokeWidth: 1 } 
           },
-          selected: { 
-            fill: "#38bdf8",
-            stroke: "#0ea5e9",
-            strokeWidth: 1
+          
+          
+          selectedRegions: ["24", "31", "15", "41", "10", "25","8","2","18"],
+          
+          
+          onRegionTooltipShow(event, tooltip, code) {
+             
           }
-        },
-        selectedRegions: ["VN", "KR"],
-        labels: {
-          regions: { 
-            render: function (code) { 
-              return ""; 
-            } 
-          }
-        }
-      });
+        });
+      }
+
     });
   </script>
 

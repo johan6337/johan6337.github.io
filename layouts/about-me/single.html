@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
   <section class="flex flex-col items-center justify-center text-center px-4 py-8">
+    
     <header class="relative flex flex-col items-center mb-6">
       {{ with .Site.Params.Author.image }}
         {{ $authorImage := "" }}
@@ -57,52 +58,69 @@
 
     <section class="mt-8 w-full max-w-7xl px-4">
       <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">Visited Countries</h2>
-      <div id="visited-map" class="visited-map"></div>
+      <div id="visited-map" class="visited-map" style="height: 500px;"></div>
     </section>
+
+    <section class="mt-12 w-full max-w-7xl px-4">
+      <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">Vietnam Check-in</h2>
+      <div id="vietnam-map" class="visited-map" style="height: 600px;"></div>
+    </section>
+
   </section>
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world-merc.js"></script>
+  
+  <script src="/js/maps/vietnam.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var el = document.getElementById("visited-map");
-      if (!el) return;
-      new jsVectorMap({
-        selector: "#visited-map",
-        map: "world_merc",
-        zoomButtons: true,
-        zoomOnScroll: true,
-        zoomMax: 12,
-        zoomMin: 1,
-        zoomAnimate: true,
-        regionStyle: {
-          initial: { 
-            fill: "#2f3136",
-            stroke: "#1a1d21",
-            strokeWidth: 0.5
+      
+      // --- CẤU HÌNH MAP THẾ GIỚI ---
+      var worldEl = document.getElementById("visited-map");
+      if (worldEl) {
+        new jsVectorMap({
+          selector: "#visited-map",
+          map: "world_merc",
+          zoomButtons: true,
+          zoomOnScroll: false,
+          zoomMax: 12,
+          zoomMin: 1,
+          regionStyle: {
+            initial: { fill: "#2f3136", stroke: "#1a1d21", strokeWidth: 0.5 },
+            hover: { fill: "#4a5568", cursor: "pointer" },
+            selected: { fill: "#e11d48", stroke: "#ffffff", strokeWidth: 1 }
           },
-          hover: {
-            fill: "#4a5568",
-            cursor: "pointer"
+          selectedRegions: ["VN", "KR"], // Mã quốc gia ISO 2 chữ cái
+        });
+      }
+
+      // --- CẤU HÌNH MAP VIỆT NAM ---
+      var vnEl = document.getElementById("vietnam-map");
+      if (vnEl) {
+        new jsVectorMap({
+          selector: "#vietnam-map",
+          map: "vietnam", // Tên map định nghĩa trong file vietnam.js
+          zoomButtons: true,
+          zoomOnScroll: false,
+          regionStyle: {
+            initial: { fill: "#2f3136", stroke: "#1a1d21", strokeWidth: 0.5 },
+            hover: { fill: "#4a5568", cursor: "pointer" },
+            selected: { fill: "#e11d48", stroke: "#ffffff", strokeWidth: 1 } // Màu đỏ hồng cho nổi bật
           },
-          selected: { 
-            fill: "#38bdf8",
-            stroke: "#0ea5e9",
-            strokeWidth: 1
+          // Danh sách ID các tỉnh đã đi (theo file JS bạn cung cấp)
+          // "24": Hà Nội, "31": TP.HCM, "15": Đà Nẵng, "37": Lạng Sơn...
+          selectedRegions: ["24", "31", "15", "41", "10", "25","8","2","18","38"],
+          
+          // Tooltip hiển thị tên tỉnh
+          onRegionTooltipShow(event, tooltip, code) {
+             // Thư viện tự lấy tên từ file js, không cần config thêm
           }
-        },
-        selectedRegions: ["VN", "KR"],
-        labels: {
-          regions: { 
-            render: function (code) { 
-              return ""; 
-            } 
-          }
-        }
-      });
+        });
+      }
+
     });
   </script>
 {{ end }}

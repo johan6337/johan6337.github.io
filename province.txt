@@ -1,0 +1,33 @@
+ID,Tên Tỉnh / Thành Phố,ID,Tên Tỉnh / Thành Phố
+"""1""",An Giang,"""33""",Kiên Giang
+"""2""",Bà Rịa - Vũng Tàu,"""34""",Kon Tum
+"""3""",Bạc Liêu,"""35""",Lai Châu
+"""4""",Bắc Kạn,"""36""",Lào Cai (Sapa)
+"""5""",Bắc Giang,"""37""",Lạng Sơn
+"""6""",Bắc Ninh,"""38""",Lâm Đồng (Đà Lạt)
+"""7""",Bến Tre,"""39""",Long An
+"""8""",Bình Dương,"""40""",Nam Định
+"""9""",Bình Định (Quy Nhơn),"""41""",Nghệ An
+"""10""",Bình Phước,"""42""",Ninh Bình
+"""11""",Bình Thuận (Phan Thiết),"""43""",Ninh Thuận
+"""12""",Cà Mau,"""44""",Phú Thọ
+"""13""",Cao Bằng,"""45""",Phú Yên
+"""14""",Cần Thơ,"""46""",Quảng Bình
+"""15""",Đà Nẵng,"""47""",Quảng Nam (Hội An)
+"""16""",Đắk Lắk,"""48""",Quảng Ngãi
+"""17""",Đắk Nông,"""49""",Quảng Ninh (Hạ Long)
+"""18""",Đồng Nai,"""50""",Quảng Trị
+"""19""",Đồng Tháp,"""51""",Sóc Trăng
+"""20""",Điện Biên,"""52""",Sơn La
+"""21""",Gia Lai,"""53""",Tây Ninh
+"""22""",Hà Giang,"""54""",Thái Bình
+"""23""",Hà Nam,"""55""",Thái Nguyên
+"""24""",Hà Nội,"""56""",Thanh Hóa
+"""25""",Hà Tĩnh,"""57""",Thừa Thiên - Huế
+"""26""",Hải Dương,"""58""",Tiền Giang
+"""27""",Hải Phòng,"""59""",Trà Vinh
+"""28""",Hòa Bình,"""60""",Tuyên Quang
+"""29""",Hậu Giang,"""61""",Vĩnh Long
+"""30""",Hưng Yên,"""62""",Vĩnh Phúc
+"""31""",TP. Hồ Chí Minh,"""63""",Yên Bái
+"""32""",Khánh Hòa (Nha Trang),,

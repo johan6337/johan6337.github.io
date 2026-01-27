@@ -228,7 +228,7 @@
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Blogs",
+    "articleSection": "Blog",
     "name": "Symmetric Cipher",
     "headline": "Symmetric Cipher",
     
@@ -255,7 +255,7 @@
     "itemListElement": [{
             "@type": "ListItem",
             "position":  1 ,
-            "name": "Blogs",
+            "name": "Blog",
             "item": "http://localhost:1313/blog/"
           },{
         "@type": "ListItem",
@@ -382,13 +382,14 @@
       <div class="cursor-pointer flex items-center">
         <a
           
-            tabindex="0"
+            href="/blog/"
+            
           
           aria-label="Blogs"
           class="flex items-center text-base font-medium bf-icon-color-hover"
-          title="">
+          title="Blog">
           
-          <span class="text-bg font-bg break-normal" title="">
+          <span class="text-bg font-bg break-normal" title="Blog">
             Blogs
           </span>
           <span>
@@ -444,11 +445,11 @@
       
   
     <a
-      href=""
+      href="/writeup/"
       
       class="flex items-center bf-icon-color-hover"
       aria-label="Writeups"
-      title="">
+      title="Writeups">
       
       
         <span class="text-base font-medium break-normal">
@@ -572,12 +573,12 @@
     
     <div class="px-2">
       <a
-        href=""
+        href="/blog/"
         aria-label="Blogs"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="" class="text-2xl font-bold tracking-tight">
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
           Blogs
         </span>
         
@@ -640,12 +641,12 @@
     
     <div class="px-2">
       <a
-        href=""
+        href="/writeup/"
         aria-label="Writeups"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="" class="text-2xl font-bold tracking-tight">
+        <span title="Writeups" class="text-2xl font-bold tracking-tight">
           Writeups
         </span>
         
@@ -674,18 +675,6 @@
 
         
   
-    <div class="flex flex-wrap gap-4 mt-8 pt-8 border-t bf-border-color">
-      
-        <a
-          href="/categories/"
-          aria-label="Categories"
-          class="inline-flex items-center gap-2 px-2 py-2 bf-icon-color-hover rounded-full text-sm">
-          
-          <span title="Categories">Categories</span>
-        </a>
-      
-    </div>
-  
 
         
   
@@ -705,25 +694,6 @@
   </div>
 </div>
 
-
-  <div
-    class="main-menu flex pb-3 flex-col items-end justify-between md:justify-start space-x-3 
-      -mt-[15px]
-    ">
-    <div class="hidden md:flex items-center space-x-5">
-      
-        <a
-          href="/categories/"
-          
-          class="flex items-center bf-icon-color-hover">
-          
-          <span class="text-xs font-light" title="Categories">
-            Categories
-          </span>
-        </a>
-      
-    </div>
-  </div>
 
 
 
@@ -768,7 +738,7 @@
   
   <li class="inline">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/blog/"
-      >Blogs</a
+      >Blog</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 

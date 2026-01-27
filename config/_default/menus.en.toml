@@ -16,6 +16,7 @@ weight = 10_000
 # Blog menu
 [[main]]
 name = "Blogs"
+pageRef = "blog"
 weight = 20
 
 
@@ -38,11 +39,7 @@ pageRef = "blog/rsa"
 #----------------------------
 
 
-#Navigation
-[[subnavigation]]
-  name = "Categories"
-  pageRef = "categories"
-  weight = 30
+ 
 #-------------------------
 
 [[footer]]
