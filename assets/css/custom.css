@@ -124,3 +124,32 @@
     width: 100% !important;
     height: 100% !important;
 }
+
+/* 9. KaTeX: tránh bị cắt công thức dài (cho phép cuộn ngang) */
+.katex-display {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 0.5rem 0.25rem !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Giữ KaTeX là một khối có thể cuộn, không bị co/clip bởi layout */
+.katex-display > .katex {
+    display: inline-block !important;
+    max-width: 100% !important;
+}
+
+/* Hiển thị scrollbar ngang rõ ràng hơn (chỉ cho KaTeX) */
+.katex-display::-webkit-scrollbar {
+    height: 8px;
+}
+.katex-display::-webkit-scrollbar-track {
+    background: transparent;
+}
+.katex-display::-webkit-scrollbar-thumb {
+    background: var(--color-primary-500);
+    border-radius: 4px;
+}

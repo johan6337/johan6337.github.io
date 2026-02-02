@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=54106&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -12,7 +12,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color">
-
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    });
+  </script>
   
   
     <title>Cryptography &middot; The Sad Horse</title>
@@ -28,7 +42,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/tags/cryptography/">
+  <link rel="canonical" href="http://localhost:54106/tags/cryptography/">
   
     
       <link rel="alternate" type="application/rss+xml" href="/tags/cryptography/index.xml" title="The Sad Horse" />
@@ -55,7 +69,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/tags/cryptography/">
+  <meta property="og:url" content="http://localhost:54106/tags/cryptography/">
   <meta property="og:site_name" content="The Sad Horse">
   <meta property="og:title" content="Cryptography">
   <meta property="og:description" content="The Sad Horse Blog - Cryptography, CTF Write-ups and Web Exploitation">
@@ -233,16 +247,16 @@
     "headline": "Cryptography",
     
     "inLanguage": "en",
-    "url" : "http://localhost:1313/tags/cryptography/",
+    "url" : "http://localhost:54106/tags/cryptography/",
     "author" : {
       "@type": "Person",
       "name": "h4n13"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-01-27T00:00:00\u002b00:00",
-    "datePublished": "2026-01-27T00:00:00\u002b00:00",
+    "dateCreated": "2026-01-29T00:00:00\u002b00:00",
+    "datePublished": "2026-01-29T00:00:00\u002b00:00",
     
-    "dateModified": "2026-01-27T00:00:00\u002b00:00",
+    "dateModified": "2026-01-29T00:00:00\u002b00:00",
     
     
     
@@ -256,12 +270,12 @@
             "@type": "ListItem",
             "position":  1 ,
             "name": "Tags",
-            "item": "http://localhost:1313/tags/"
+            "item": "http://localhost:54106/tags/"
           },{
         "@type": "ListItem",
         "position":  2 ,
         "name": "Cryptography",
-        "item": "http://localhost:1313/tags/cryptography/"
+        "item": "http://localhost:54106/tags/cryptography/"
       }
     ]
   }]
@@ -840,6 +854,95 @@
   
     <div class="flex-none relative overflow-hidden thumbnail_card">
       <img
+        src="/blog/symmetric-cipher/cylic-attack-gcm/feature_hu_bb04ad1936daac25.png"
+        role="presentation"
+        loading="lazy"
+        decoding="async"
+        class="not-prose absolute inset-0 w-full h-full object-cover">
+    </div>
+  
+  
+  <div class="p-4">
+    <header>
+      <a
+        
+          href="/blog/symmetric-cipher/cylic-attack-gcm/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          A Gentle Explanation of the Cyclic Attack on AES-GCM
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+        
+        
+          
+        
+        1 posts
+      
+    </div>
+    
+      <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1 line-clamp-3">
+        Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography
+      </div>
+    
+    
+      <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
+        
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+              
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+
+    
+    
+      
+        
+        
+          
+        
+      
+    
+  
+
+
+
+<article
+  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+    <div class="flex-none relative overflow-hidden thumbnail_card">
+      <img
         src="/writeup/lilacctf-2025/feature_hu_c4273486ea7d7934.png"
         role="presentation"
         loading="lazy"
@@ -1139,7 +1242,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col z-500 bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="http://localhost:54106/"
   data-search-mode="modal">
   <div
     id="search-modal"

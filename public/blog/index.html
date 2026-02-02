@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=54106&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -12,7 +12,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color">
-
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    });
+  </script>
   
   
     <title>Blog &middot; The Sad Horse</title>
@@ -28,7 +42,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/blog/">
+  <link rel="canonical" href="http://localhost:54106/blog/">
   
     
       <link rel="alternate" type="application/rss+xml" href="/blog/index.xml" title="The Sad Horse" />
@@ -55,7 +69,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/blog/">
+  <meta property="og:url" content="http://localhost:54106/blog/">
   <meta property="og:site_name" content="The Sad Horse">
   <meta property="og:title" content="Blog">
   <meta property="og:description" content="My blog posts about cryptography and CTF.">
@@ -112,8 +126,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.3cdd6a3b89bda35177dc827fe8b86fb03775153c516d70863d7a251b1a18a2b8617e2dcdf2349f8148777f5a9acd6304dbb57c5d0856aadb44b6e2102a5c645e.css"
-    integrity="sha512-PN1qO4m9o1F33IJ/6LhvsDd1FTxRbXCGPXolGxoYorhhfi3N8jSfgUh3f1qazWME27V8XQhWqttEtuIQKlxkXg==">
+    href="/css/main.bundle.min.cdcb7d10e95b82d36b25196dc750258de9bdef89ae8b0a7cbe1bf95037a36918ec8c15fef9571c2a0e3bb896b0e8019eef26aa745ebd990455e9cbf0f9079c73.css"
+    integrity="sha512-zct9EOlbgtNrJRltx1Aljem974muiwp8vhv5UDejaRjsjBX&#43;&#43;VccKg47uJaw6AGe7yaqdF69mQRV6cvw&#43;Qeccw==">
 
   
   
@@ -233,16 +247,16 @@
     "headline": "Blog",
     "description": "My blog posts about cryptography and CTF.",
     "inLanguage": "en",
-    "url" : "http://localhost:1313/blog/",
+    "url" : "http://localhost:54106/blog/",
     "author" : {
       "@type": "Person",
       "name": "h4n13"
     },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-01-29T00:00:00\u002b00:00",
+    "datePublished": "2026-01-29T00:00:00\u002b00:00",
     
-    
-    
-    
-    
+    "dateModified": "2026-01-29T00:00:00\u002b00:00",
     
     
     
@@ -256,7 +270,7 @@
         "@type": "ListItem",
         "position":  1 ,
         "name": "Blog",
-        "item": "http://localhost:1313/blog/"
+        "item": "http://localhost:54106/blog/"
       }
     ]
   }]
@@ -869,11 +883,9 @@
     </header>
     <div class="text-sm text-neutral-500 dark:text-neutral-400">
       
+      
         
-        
-          
-        
-        0 posts
+        1 posts
       
     </div>
     
@@ -886,6 +898,8 @@
   <div class="px-6 pt-4 pb-2"></div>
 </article>
 
+                
+              
                 
                   
 
@@ -943,9 +957,7 @@
     </header>
     <div class="text-sm text-neutral-500 dark:text-neutral-400">
       
-        
-        
-          
+      
         
         0 posts
       
@@ -1065,7 +1077,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col z-500 bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="http://localhost:54106/"
   data-search-mode="modal">
   <div
     id="search-modal"

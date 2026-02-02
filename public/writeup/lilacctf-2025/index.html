@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=54106&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -12,7 +12,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color">
-
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    });
+  </script>
   
   
     <title>LilacCTF 2026 Writeup &middot; The Sad Horse</title>
@@ -28,7 +42,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/writeup/lilacctf-2025/">
+  <link rel="canonical" href="http://localhost:54106/writeup/lilacctf-2025/">
   
 
   
@@ -52,7 +66,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/writeup/lilacctf-2025/">
+  <meta property="og:url" content="http://localhost:54106/writeup/lilacctf-2025/">
   <meta property="og:site_name" content="The Sad Horse">
   <meta property="og:title" content="LilacCTF 2026 Writeup">
   <meta property="og:description" content="Writeup for some challenges that I upsolved in LilacCTF 2026.">
@@ -64,11 +78,11 @@
     <meta property="article:tag" content="Ctf">
     <meta property="article:tag" content="Writeup">
     <meta property="article:tag" content="Cryptography">
-    <meta property="og:image" content="http://localhost:1313/writeup/lilacctf-2025/feature.png">
+    <meta property="og:image" content="http://localhost:54106/writeup/lilacctf-2025/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/writeup/lilacctf-2025/feature.png">
+  <meta name="twitter:image" content="http://localhost:54106/writeup/lilacctf-2025/feature.png">
   <meta name="twitter:title" content="LilacCTF 2026 Writeup">
   <meta name="twitter:description" content="Writeup for some challenges that I upsolved in LilacCTF 2026.">
 
@@ -238,7 +252,7 @@
     "headline": "LilacCTF 2026 Writeup",
     "description": "Writeup for some challenges that I upsolved in LilacCTF 2026.",
     "inLanguage": "en",
-    "url" : "http://localhost:1313/writeup/lilacctf-2025/",
+    "url" : "http://localhost:54106/writeup/lilacctf-2025/",
     "author" : {
       "@type": "Person",
       "name": "h4n13"
@@ -261,12 +275,12 @@
             "@type": "ListItem",
             "position":  1 ,
             "name": "Writeups",
-            "item": "http://localhost:1313/writeup/"
+            "item": "http://localhost:54106/writeup/"
           },{
         "@type": "ListItem",
         "position":  2 ,
         "name": "LilacCTF 2026 Writeup",
-        "item": "http://localhost:1313/writeup/lilacctf-2025/"
+        "item": "http://localhost:54106/writeup/lilacctf-2025/"
       }
     ]
   }]
@@ -1059,7 +1073,7 @@
       </div>
     
     
-      <div class="text-sm text-neutral-700 dark:text-neutral-400">This is my personal blog where I share cryptography posts and CTF write-ups. I&rsquo;m also learning about Web Exploitation (just start recently).</div>
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">I am not a dreamer</div>
     
     <div class="text-2xl sm:text-lg">
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
@@ -1266,7 +1280,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col z-500 bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="http://localhost:54106/"
   data-search-mode="modal">
   <div
     id="search-modal"

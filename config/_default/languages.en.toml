@@ -16,8 +16,8 @@ keywords = ["The Sad Horse", "TheSadHorse Blog", "Johan Blog", "Hugo Blowfish", 
 [params.author]
 name = '''h4n13'''
 image = "img/sad-horse.png"
-headline = "Life Shjt 🚬"
-bio = "This is my personal blog where I share cryptography posts and CTF write-ups. I'm also learning about Web Exploitation (just start recently)."
+# headline = "Life Shjt 🚬"
+bio = "I am not a dreamer"
 links = [
   { twitter = "https://x.com/chunguabuon" },
   { telegram = "https://t.me/vanhoang37123" },

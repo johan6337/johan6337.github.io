@@ -111,3 +111,6 @@ projectId = "the-sad-horse"
 storageBucket = "the-sad-horse.firebasestorage.app"
 messagingSenderId = "360137054761"
 appId = "1:360137054761:web:8a0e5865ca49f325669a38"
+
+[params.article]
+  showMath = true
