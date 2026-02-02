@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on The Sad Horse</title>
-    <link>http://localhost:63819/blog/</link>
+    <link>http://localhost:49322/blog/</link>
     <description>Recent content in Blog on The Sad Horse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 h4n13</copyright>
-    <lastBuildDate></lastBuildDate><atom:link href="http://localhost:63819/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate><atom:link href="http://localhost:49322/blog/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

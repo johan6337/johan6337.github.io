@@ -131,8 +131,9 @@
     max-width: 100% !important;
     box-sizing: border-box !important;
     overflow-x: auto !important;
-    overflow-y: hidden !important;
-    padding: 0.5rem 0.25rem !important;
+    /* Tránh bị cắt mũ/chỉ số trên-dưới (sup/sub) khi container set overflow-y hidden */
+    overflow-y: visible !important;
+    padding: 0.75rem 0.25rem !important;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -140,6 +141,8 @@
 .katex-display > .katex {
     display: inline-block !important;
     max-width: 100% !important;
+    /* Tạo chút “thở” để glyph không bị chạm mép */
+    padding: 0.1em 0 !important;
 }
 
 /* Hiển thị scrollbar ngang rõ ràng hơn (chỉ cho KaTeX) */

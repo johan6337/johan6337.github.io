@@ -85,7 +85,7 @@ A Galois field \(GF(2^{n})\) is a finite field with \(2^{n}\) elements. In the c
   - **Addition:** Addition is performed using bitwise XOR. For example, if we have two polynomials \(A(x)\) and \(B(x)\), their sum \(C(x) = A(x) + B(x)\) is computed by XORing their coefficients.
 
   - **Multiplication:** Multiplication is more complex and involves polynomial multiplication followed by reduction modulo an irreducible polynomial of degree 128. In AES-GCM, the chosen irreducible polynomial is:
-    $$P(x) = x^{128} + x^7 + x^2 + x + 1$$
+    $P(x) = x^{128} + x^7 + x^2 + x + 1$
   
 Here is the implementation of addition and multiplication in \(GF(2^{128})\):
 
@@ -151,7 +151,10 @@ length_block = ((8 * len_aad) << 64) | (8 * len_ct)
 ```
 
 Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key,\(T\) is the constant term that combines the IV with the counter 1 (that why we start at 2 in encryption process). The GHASH is computed as follows in \(GF(2^{128})\):
-$$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$ 
+
+$$
+GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T
+$$
 
 Below is the encryption and decryption process in python:
 
@@ -200,7 +203,10 @@ As we can see, the factorization contains several small prime factors, such as 3
 ### 2. H = 0 (the all-zero key)
 
 The simplest weak key is when \(H = 0\). In this case, the GHASH function simplifies significantly:
-$$GHASH(0,C,T) = T$$
+
+$$
+GHASH(0,C,T) = T
+$$
 So in this case, the authentication tag only depends on the length block \(T\), which is predictable. An attacker can easily forge valid tags for any ciphertext by computing the correct length block.
 
 **[POC]**:
@@ -234,13 +240,22 @@ except Exception as e:
 ### 3. H is the indentity element (order 1)
 
 The indentity element in \(GF(2^{128})\) is: 
-$$I =  80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00$$
+
+$$
+I =  80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+$$
 
 So if H = I, then the GHASH function becomes:
-$$GHASH(H,C,T) =A . I^{n+1} + C_{0} . I^{n} + ... + C_{n-1} . I + T$$ 
+
+$$
+GHASH(H,C,T) =A . I^{n+1} + C_{0} . I^{n} + ... + C_{n-1} . I + T
+$$
 
 Since multiplying by the identity element does not change the value, we have:
-$$GHASH(H,C,T) =A + C_{0} + ... + C_{n-1} + T$$
+
+$$
+GHASH(H,C,T) =A + C_{0} + ... + C_{n-1} + T
+$$
 
 This means if we swap the position of any two ciphertext blocks, the GHASH value remains unchanged. An attacker can exploit this property to create valid forgeries by rearranging ciphertext blocks.
 
@@ -276,9 +291,15 @@ except Exception as e:
 ### 4. H lies in a small order subgroup (3,5,17)
 
 So far, we have seen weak keys with orders 0 and 1. Now, let's explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:
-$$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$
+
+$$
+GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T
+$$
 We can group the terms based on their exponents modulo 3:
-$$GHASH(H,C,T) = (A + C_{3k} + ...) . H^{0} + (C_{3k+1} + ...) . H^{1} + (C_{3k+2} + ...) . H^{2} + T$$
+
+$$
+GHASH(H,C,T) = (A + C_{3k} + ...) . H^{0} + (C_{3k+1} + ...) . H^{1} + (C_{3k+2} + ...) . H^{2} + T
+$$
 This means that by rearranging the ciphertext blocks in a way that preserves these groupings, an attacker can create valid forgeries.
 First we can find a weak key with order n with the following code:
 

@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49322&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -42,7 +42,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/">
+  <link rel="canonical" href="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/">
   
 
   
@@ -66,7 +66,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/">
+  <meta property="og:url" content="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/">
   <meta property="og:site_name" content="The Sad Horse">
   <meta property="og:title" content="A Gentle Explanation of the Cyclic Attack on AES-GCM">
   <meta property="og:description" content="Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography">
@@ -78,11 +78,11 @@
     <meta property="article:tag" content="AES-GCM">
     <meta property="article:tag" content="Research">
     <meta property="article:tag" content="Cryptography">
-    <meta property="og:image" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
+    <meta property="og:image" content="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
+  <meta name="twitter:image" content="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
   <meta name="twitter:title" content="A Gentle Explanation of the Cyclic Attack on AES-GCM">
   <meta name="twitter:description" content="Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography">
 
@@ -131,8 +131,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.cdcb7d10e95b82d36b25196dc750258de9bdef89ae8b0a7cbe1bf95037a36918ec8c15fef9571c2a0e3bb896b0e8019eef26aa745ebd990455e9cbf0f9079c73.css"
-    integrity="sha512-zct9EOlbgtNrJRltx1Aljem974muiwp8vhv5UDejaRjsjBX&#43;&#43;VccKg47uJaw6AGe7yaqdF69mQRV6cvw&#43;Qeccw==">
+    href="/css/main.bundle.min.f7c07445424eaf69956a5177443c8eea31dff428663b4e2f3c6790fcfa4ec0f6afc1e66c95f5c24489678a8db4d797e1bdbcc701c3c6e64c116e265d813690d3.css"
+    integrity="sha512-98B0RUJOr2mValF3RDyO6jHf9ChmO04vPGeQ/PpOwPavweZslfXCRIlnio2015fhvbzHAcPG5kwRbiZdgTaQ0w==">
 
   
   
@@ -391,7 +391,7 @@
     "headline": "A Gentle Explanation of the Cyclic Attack on AES-GCM",
     "description": "Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography",
     "inLanguage": "en",
-    "url" : "http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/",
+    "url" : "http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/",
     "author" : {
       "@type": "Person",
       "name": "h4n13"
@@ -405,7 +405,7 @@
     "keywords": ["AES-GCM","Research","Cryptography"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1846"
+    "wordCount": "1860"
   },
   {
     "@context": "https://schema.org",
@@ -414,17 +414,17 @@
             "@type": "ListItem",
             "position":  1 ,
             "name": "Symmetric Cipher",
-            "item": "http://localhost:1313/blog/symmetric-cipher/"
+            "item": "http://localhost:49322/blog/symmetric-cipher/"
           },{
             "@type": "ListItem",
             "position":  2 ,
             "name": "Blog",
-            "item": "http://localhost:1313/blog/"
+            "item": "http://localhost:49322/blog/"
           },{
         "@type": "ListItem",
         "position":  3 ,
         "name": "A Gentle Explanation of the Cyclic Attack on AES-GCM",
-        "item": "http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/"
+        "item": "http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/"
       }
     ]
   }]
@@ -608,11 +608,11 @@
       
   
     <a
-      href="/writeup/"
+      href=""
       
       class="flex items-center bf-icon-color-hover"
       aria-label="Writeups"
-      title="Writeups">
+      title="">
       
       
         <span class="text-base font-medium break-normal">
@@ -804,12 +804,12 @@
     
     <div class="px-2">
       <a
-        href="/writeup/"
+        href=""
         aria-label="Writeups"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="Writeups" class="text-2xl font-bold tracking-tight">
+        <span title="" class="text-2xl font-bold tracking-tight">
           Writeups
         </span>
         
@@ -1476,8 +1476,8 @@ In this post, I will introduce the AES-GCM mode of operation, explain the concep
 </li>
 <li>
 <p><strong>Multiplication:</strong> Multiplication is more complex and involves polynomial multiplication followed by reduction modulo an irreducible polynomial of degree 128. In AES-GCM, the chosen irreducible polynomial is:
-</p>
-$$P(x) = x^{128} + x^7 + x^2 + x + 1$$</li>
+$P(x) = x^{128} + x^7 + x^2 + x + 1$</p>
+</li>
 </ul>
 <p>Here is the implementation of addition and multiplication in \(GF(2^{128})\):</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
@@ -1555,9 +1555,10 @@ $$P(x) = x^{128} + x^7 + x^2 + x + 1$$</li>
 </li>
 </ul>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">length_block</span> <span class="o">=</span> <span class="p">((</span><span class="mi">8</span> <span class="o">*</span> <span class="n">len_aad</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">64</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">len_ct</span><span class="p">)</span></span></span></code></pre></div></div>
-<p>Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key,\(T\) is the constant term that combines the IV with the counter 1 (that why we start at 2 in encryption process). The GHASH is computed as follows in \(GF(2^{128})\):
-</p>
-$$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$<p>Below is the encryption and decryption process in python:</p>
+<p>Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key,\(T\) is the constant term that combines the IV with the counter 1 (that why we start at 2 in encryption process). The GHASH is computed as follows in \(GF(2^{128})\):</p>
+$$
+GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T
+$$<p>Below is the encryption and decryption process in python:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Random</span> <span class="kn">import</span> <span class="n">get_random_bytes</span>
 </span></span><span class="line"><span class="cl">
@@ -1618,9 +1619,10 @@ $$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$<p>Below is
     </span>
     
 </h3>
-<p>The simplest weak key is when \(H = 0\). In this case, the GHASH function simplifies significantly:
-</p>
-$$GHASH(0,C,T) = T$$<p>
+<p>The simplest weak key is when \(H = 0\). In this case, the GHASH function simplifies significantly:</p>
+$$
+GHASH(0,C,T) = T
+$$<p>
 So in this case, the authentication tag only depends on the length block \(T\), which is predictable. An attacker can easily forge valid tags for any ciphertext by computing the correct length block.</p>
 <p><strong>[POC]</strong>:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">GCM</span> <span class="kn">import</span> <span class="n">AES_GCM</span>
@@ -1657,13 +1659,16 @@ So in this case, the authentication tag only depends on the length block \(T\), 
     </span>
     
 </h3>
-<p>The indentity element in \(GF(2^{128})\) is:
-</p>
-$$I =  80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00$$<p>So if H = I, then the GHASH function becomes:
-</p>
-$$GHASH(H,C,T) =A . I^{n+1} + C_{0} . I^{n} + ... + C_{n-1} . I + T$$<p>Since multiplying by the identity element does not change the value, we have:
-</p>
-$$GHASH(H,C,T) =A + C_{0} + ... + C_{n-1} + T$$<p>This means if we swap the position of any two ciphertext blocks, the GHASH value remains unchanged. An attacker can exploit this property to create valid forgeries by rearranging ciphertext blocks.</p>
+<p>The indentity element in \(GF(2^{128})\) is:</p>
+$$
+I =  80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+$$<p>So if H = I, then the GHASH function becomes:</p>
+$$
+GHASH(H,C,T) =A . I^{n+1} + C_{0} . I^{n} + ... + C_{n-1} . I + T
+$$<p>Since multiplying by the identity element does not change the value, we have:</p>
+$$
+GHASH(H,C,T) =A + C_{0} + ... + C_{n-1} + T
+$$<p>This means if we swap the position of any two ciphertext blocks, the GHASH value remains unchanged. An attacker can exploit this property to create valid forgeries by rearranging ciphertext blocks.</p>
 <p><strong>[POC]</strong>:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">GCM</span> <span class="kn">import</span> <span class="n">AES_GCM</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
@@ -1701,12 +1706,14 @@ $$GHASH(H,C,T) =A + C_{0} + ... + C_{n-1} + T$$<p>This means if we swap the posi
     </span>
     
 </h3>
-<p>So far, we have seen weak keys with orders 0 and 1. Now, let&rsquo;s explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:
-</p>
-$$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$<p>
-We can group the terms based on their exponents modulo 3:
-</p>
-$$GHASH(H,C,T) = (A + C_{3k} + ...) . H^{0} + (C_{3k+1} + ...) . H^{1} + (C_{3k+2} + ...) . H^{2} + T$$<p>
+<p>So far, we have seen weak keys with orders 0 and 1. Now, let&rsquo;s explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:</p>
+$$
+GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T
+$$<p>
+We can group the terms based on their exponents modulo 3:</p>
+$$
+GHASH(H,C,T) = (A + C_{3k} + ...) . H^{0} + (C_{3k+1} + ...) . H^{1} + (C_{3k+2} + ...) . H^{2} + T
+$$<p>
 This means that by rearranging the ciphertext blocks in a way that preserves these groupings, an attacker can create valid forgeries.
 First we can find a weak key with order n with the following code:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">F</span><span class="o">.&lt;</span><span class="n">x</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">GF</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">128</span><span class="p">)</span>
@@ -1914,7 +1921,7 @@ First we can find a weak key with order n with the following code:</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col z-500 bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="http://localhost:49322/"
   data-search-mode="modal">
   <div
     id="search-modal"
