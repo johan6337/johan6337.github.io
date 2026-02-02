@@ -5,7 +5,7 @@ draft: false
 description: "Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography"
 tags: ["AES-GCM", "Research", "Cryptography"]
 ---
-
+{{< katex >}}
 ## Introduction
 
 **AES-GCM** (Galois/Counter Mode) is currently one of the most widely used authenticated encryption algorithms. By combining the AES block cipher with the GCM mode of operation, it provides two critical security properties simultaneously: **confidentiality** (keeping data secret) and **data integrity** (ensuring data hasn't been tampered with). 
@@ -14,6 +14,8 @@ This dual functionality help GCM reduce the cost on both performance and impleme
 
 However, despite its popularity, AES-GCM is not without its flaws. In recent years, researchers have uncovered several weaknesses and attack vectors, such as the [*Forbidden Attack*](https://eprint.iacr.org/2016/475.pdf) or the [*Invisible Salamander*](https://keymaterial.net/2020/09/07/invisible-salamanders-in-aes-gcm-siv/). Among these interesting vulnerabilities is the **Cyclic Attack**, which targets specific "weak keys" in the GCM structure.
 
+
+{{< katex >}}
 In this post, I will introduce the AES-GCM mode of operation, explain the concept of weak keys, and then walk through the mechanics of the Cyclic Attack. Finally, there will be a challenge and solution section for readers to test their understanding of the material.
 
 For those interested in the deep technical details, the original research paper for this attack can be found here: [Weak Keys in the GCM Mode of Operation (Saarinen, 2011)](https://eprint.iacr.org/2011/202.pdf).
@@ -74,18 +76,18 @@ print("Decrypted:", decrypted_data)
 
 Next, the functionality that make GCM special compared to other modes is its authentication mechanism. GCM uses a polynomial-based hash function called **GHASH** to compute an authentication tag over both the ciphertext and any additional authenticated data (AAD). This tag is then appended to the ciphertext to ensure data integrity.
 
-The GHASH function processes in the Galois field $GF(2^{128})$ using the hash key H and combines the AAD, ciphertext, and length blocks to produce the authentication tag. Before we learn how about GHASH works, we need to understand a bit about Galois fields.
+The GHASH function processes in the Galois field \(GF(2^{128})\) using the hash key H and combines the AAD, ciphertext, and length blocks to produce the authentication tag. Before we learn how about GHASH works, we need to understand a bit about Galois fields.
 
-#### Extension Field GF($2^{128}$)
+#### Extension Field GF(2^128)
 
-A Galois field GF($2^{n}$) is a finite field with $2^{n}$ elements. In the case of $GF(2^{128})$, we are working with polynomials of degree less than 128 with coefficients in $GF(2)$ (i.e., binary coefficients 0 or 1). The operations in this field are defined as follows:
+A Galois field \(GF(2^{n})\) is a finite field with \(2^{n}\) elements. In the case of \(GF(2^{128})\), we are working with polynomials of degree less than 128 with coefficients in \(GF(2)\) (i.e., binary coefficients 0 or 1). The operations in this field are defined as follows:
 
-  - **Addition:** Addition is performed using bitwise XOR. For example, if we have two polynomials $A(x)$ and $B(x)$, their sum $C(x) = A(x) + B(x)$ is computed by XORing their coefficients.
+  - **Addition:** Addition is performed using bitwise XOR. For example, if we have two polynomials \(A(x)\) and \(B(x)\), their sum \(C(x) = A(x) + B(x)\) is computed by XORing their coefficients.
 
   - **Multiplication:** Multiplication is more complex and involves polynomial multiplication followed by reduction modulo an irreducible polynomial of degree 128. In AES-GCM, the chosen irreducible polynomial is:
     $$P(x) = x^{128} + x^7 + x^2 + x + 1$$
   
-Here is the implementation of addition and multiplication in GF($2^{128}$):
+Here is the implementation of addition and multiplication in \(GF(2^{128})\):
 
 ```python
 
@@ -148,7 +150,7 @@ print("Hash Key H:", H.hex())
 length_block = ((8 * len_aad) << 64) | (8 * len_ct)
 ```
 
-Now consider $C_i$ as the $i^{th}$ ciphertext block, $A$ as the AAD block, $L$ as the length block, and $H$ as the hash key,$T$ is the constant term that combines the IV with the counter 1 (that why we start at 2 in encryption process). The GHASH is computed as follows in $GF(2^{128})$:
+Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key,\(T\) is the constant term that combines the IV with the counter 1 (that why we start at 2 in encryption process). The GHASH is computed as follows in \(GF(2^{128})\):
 $$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$ 
 
 Below is the encryption and decryption process in python:
@@ -176,29 +178,31 @@ print("Decrypted Data:", decrypted_data)
 
 ## The Cyclic Attack toward AES-GCM
 
-The authentication key $H$ in AES-GCM is also being an attack target if it is a "weak key". Now, let explore when $H$ is a weak key and how the cyclic attack works.
+The authentication key \(H\) in AES-GCM is also being an attack target if it is a "weak key". Now, let explore when \(H\) is a weak key and how the cyclic attack works.
 
-### 1. The order of GF($2^{128}$) and Lagrange's Theorem
+### 1. The order of GF(2^128) and Lagrange's Theorem
 
-The multiplicative group of non-zero elements in $GF(2^{128})$ has order $2^{128} - 1$. According to Lagrange's theorem:
+\(\lvert GF(2^{128})^{\times} \rvert = 2^{128} - 1\)
+
+The multiplicative group of non-zero elements in \(GF(2^{128})\) has order \(2^{128} - 1\). According to Lagrange's theorem:
 > *The order of any subgroup divides the order of the group.*
-- Now let factor the order of the $GF(2^{128})$ to see all the subgroup orders:
+- Now let factor the order of the \(GF(2^{128})\) to see all the subgroup orders:
 <figure style="text-align: center; margin: 20px 0;">
   <img src="FACTOR-ORDER.png" 
        alt="Figure of Galois/Counter Mode (GCM) Encryption Operation" 
        style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
   <figcaption style="color: #ffffff; font-style: italic; margin-top: 10px;">
-    Figure 4: Factorization of the order of GF($2^{128}$) <br>
+    Figure 4: Factorization of the order of GF(\(2^{128}\)) <br>
   </figcaption>
 </figure>
 
-As we can see, the factorization contains several small prime factors, such as 3, 5, 17. This means that there exist a small order subgroups in $GF(2^{128})$. Now, let figure out how these subgroup orders can lead to weak keys.
+As we can see, the factorization contains several small prime factors, such as 3, 5, 17. This means that there exist a small order subgroups in \(GF(2^{128})\). Now, let figure out how these subgroup orders can lead to weak keys.
 
 ### 2. H = 0 (the all-zero key)
 
-The simplest weak key is when $H = 0$. In this case, the GHASH function simplifies significantly:
+The simplest weak key is when \(H = 0\). In this case, the GHASH function simplifies significantly:
 $$GHASH(0,C,T) = T$$
-So in this case, the authentication tag only depends on the length block $T$, which is predictable. An attacker can easily forge valid tags for any ciphertext by computing the correct length block.
+So in this case, the authentication tag only depends on the length block \(T\), which is predictable. An attacker can easily forge valid tags for any ciphertext by computing the correct length block.
 
 **[POC]**:
 ```python
@@ -230,7 +234,7 @@ except Exception as e:
 
 ### 3. H is the indentity element (order 1)
 
-The indentity element in $GF(2^{128})$ is: 
+The indentity element in \(GF(2^{128})\) is: 
 $$I =  80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00$$
 
 So if H = I, then the GHASH function becomes:
@@ -272,7 +276,7 @@ except Exception as e:
 ```
 ### 4. H lies in a small order subgroup (3,5,17)
 
-So far, we have seen weak keys with orders 0 and 1. Now, let's explore weak keys with small orders like 3, 5, and 17. If H has the order of $d$, then $H^d = I$. This property can be exploited in the GHASH computation. For example, if H has order 3, then:
+So far, we have seen weak keys with orders 0 and 1. Now, let's explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:
 $$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$
 We can group the terms based on their exponents modulo 3:
 $$GHASH(H,C,T) = (A + C_{3k} + ...) . H^{0} + (C_{3k+1} + ...) . H^{1} + (C_{3k+2} + ...) . H^{2} + T$$
