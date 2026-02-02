@@ -182,11 +182,10 @@ The authentication key \(H\) in AES-GCM is also being an attack target if it is 
 
 ### 1. The order of GF(2^128) and Lagrange's Theorem
 
-\(\lvert GF(2^{128})^{\times} \rvert = 2^{128} - 1\)
-
-The multiplicative group of non-zero elements in \(GF(2^{128})\) has order \(2^{128} - 1\). According to Lagrange's theorem:
+The multiplicative group of non-zero elements in \(GF(2^{128})\) has the order \(\lvert GF(2^{128})^{\times} \rvert = 2^{128} - 1\). According to Lagrange's theorem:
 > *The order of any subgroup divides the order of the group.*
-- Now let factor the order of the \(GF(2^{128})\) to see all the subgroup orders:
+
+Now let factor the order of the \(GF(2^{128})\) to see all the subgroup orders:
 <figure style="text-align: center; margin: 20px 0;">
   <img src="FACTOR-ORDER.png" 
        alt="Figure of Galois/Counter Mode (GCM) Encryption Operation" 

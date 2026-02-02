@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=63819&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -42,7 +42,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:63819/blog/symmetric-cipher/cylic-attack-gcm/">
+  <link rel="canonical" href="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/">
   
 
   
@@ -66,7 +66,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:63819/blog/symmetric-cipher/cylic-attack-gcm/">
+  <meta property="og:url" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/">
   <meta property="og:site_name" content="The Sad Horse">
   <meta property="og:title" content="A Gentle Explanation of the Cyclic Attack on AES-GCM">
   <meta property="og:description" content="Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography">
@@ -78,11 +78,11 @@
     <meta property="article:tag" content="AES-GCM">
     <meta property="article:tag" content="Research">
     <meta property="article:tag" content="Cryptography">
-    <meta property="og:image" content="http://localhost:63819/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
+    <meta property="og:image" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:63819/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
+  <meta name="twitter:image" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
   <meta name="twitter:title" content="A Gentle Explanation of the Cyclic Attack on AES-GCM">
   <meta name="twitter:description" content="Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography">
 
@@ -391,7 +391,7 @@
     "headline": "A Gentle Explanation of the Cyclic Attack on AES-GCM",
     "description": "Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography",
     "inLanguage": "en",
-    "url" : "http://localhost:63819/blog/symmetric-cipher/cylic-attack-gcm/",
+    "url" : "http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/",
     "author" : {
       "@type": "Person",
       "name": "h4n13"
@@ -405,7 +405,7 @@
     "keywords": ["AES-GCM","Research","Cryptography"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1848"
+    "wordCount": "1846"
   },
   {
     "@context": "https://schema.org",
@@ -414,17 +414,17 @@
             "@type": "ListItem",
             "position":  1 ,
             "name": "Symmetric Cipher",
-            "item": "http://localhost:63819/blog/symmetric-cipher/"
+            "item": "http://localhost:1313/blog/symmetric-cipher/"
           },{
             "@type": "ListItem",
             "position":  2 ,
             "name": "Blog",
-            "item": "http://localhost:63819/blog/"
+            "item": "http://localhost:1313/blog/"
           },{
         "@type": "ListItem",
         "position":  3 ,
         "name": "A Gentle Explanation of the Cyclic Attack on AES-GCM",
-        "item": "http://localhost:63819/blog/symmetric-cipher/cylic-attack-gcm/"
+        "item": "http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/"
       }
     ]
   }]
@@ -608,11 +608,11 @@
       
   
     <a
-      href=""
+      href="/writeup/"
       
       class="flex items-center bf-icon-color-hover"
       aria-label="Writeups"
-      title="">
+      title="Writeups">
       
       
         <span class="text-base font-medium break-normal">
@@ -804,12 +804,12 @@
     
     <div class="px-2">
       <a
-        href=""
+        href="/writeup/"
         aria-label="Writeups"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="" class="text-2xl font-bold tracking-tight">
+        <span title="Writeups" class="text-2xl font-bold tracking-tight">
           Writeups
         </span>
         
@@ -1597,11 +1597,8 @@ $$GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T$$<p>Below is
     </span>
     
 </h3>
-<p>\(\lvert GF(2^{128})^{\times} \rvert = 2^{128} - 1\)</p>
-<p>The multiplicative group of non-zero elements in \(GF(2^{128})\) has order \(2^{128} - 1\). According to Lagrange&rsquo;s theorem:</p>
-<blockquote><p><em>The order of any subgroup divides the order of the group.</em></p></blockquote><ul>
-<li>Now let factor the order of the \(GF(2^{128})\) to see all the subgroup orders:</li>
-</ul>
+<p>The multiplicative group of non-zero elements in \(GF(2^{128})\) has the order \(\lvert GF(2^{128})^{\times} \rvert = 2^{128} - 1\). According to Lagrange&rsquo;s theorem:</p>
+<blockquote><p><em>The order of any subgroup divides the order of the group.</em></p></blockquote><p>Now let factor the order of the \(GF(2^{128})\) to see all the subgroup orders:</p>
 <figure style="text-align: center; margin: 20px 0;">
   <img src="FACTOR-ORDER.png" 
        alt="Figure of Galois/Counter Mode (GCM) Encryption Operation" 
@@ -1917,7 +1914,7 @@ First we can find a weak key with order n with the following code:</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col z-500 bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:63819/"
+  data-url="http://localhost:1313/"
   data-search-mode="modal">
   <div
     id="search-modal"
