@@ -16,7 +16,7 @@ However, despite its popularity, AES-GCM is not without its flaws. In recent yea
 
 
 {{< katex >}}
-In this post, I will introduce the AES-GCM mode of operation, explain the concept of weak keys, and then walk through the mechanics of the Cyclic Attack. Finally, there will be a challenge and solution section for readers to test their understanding of the material.
+In this post, I will introduce the AES-GCM mode of operation, explain the concept of weak keys, and then walk through the mechanics of the Cyclic Attack. 
 
 For those interested in the deep technical details, the original research paper for this attack can be found here: [Weak Keys in the GCM Mode of Operation (Saarinen, 2011)](https://eprint.iacr.org/2011/202.pdf).
 
@@ -150,7 +150,7 @@ print("Hash Key H:", H.hex())
 length_block = ((8 * len_aad) << 64) | (8 * len_ct)
 ```
 
-Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key,\(T\) is the constant term that combines the IV with the counter 1 (that why we start at 2 in encryption process). The GHASH is computed as follows in \(GF(2^{128})\):
+Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key, \(T\) is the constant term that combines the IV with the counter 1 ([we start at 1 because if IV = 0 then it may leaks the authentication key H](https://crypto.stackexchange.com/questions/115011/why-does-the-gcm-counter-start-at-1)). The GHASH is computed as follows in \(GF(2^{128})\):
 
 $$
 GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T
@@ -290,7 +290,7 @@ except Exception as e:
 ```
 ### 4. H lies in a small order subgroup (3,5,17)
 
-So far, we have seen weak keys with orders 0 and 1. Now, let's explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:
+So far, we have seen weak keys with equal to 0 or have order of 1. Now, let's explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:
 
 $$
 GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T

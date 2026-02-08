@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Symmetric Cipher on The Sad Horse</title>
-    <link>http://localhost:49322/blog/symmetric-cipher/</link>
+    <link>http://localhost:1313/blog/symmetric-cipher/</link>
     <description>Recent content in Symmetric Cipher on The Sad Horse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 h4n13</copyright>
-    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:49322/blog/symmetric-cipher/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/symmetric-cipher/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Gentle Explanation of the Cyclic Attack on AES-GCM</title>
-      <link>http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/</link>
+      <link>http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/</guid>
+      <guid>http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/feature.png" />
     </item>
     
   </channel>

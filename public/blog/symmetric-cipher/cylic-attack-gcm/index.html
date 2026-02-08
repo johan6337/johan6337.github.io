@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49322&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -42,7 +42,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/">
+  <link rel="canonical" href="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/">
   
 
   
@@ -66,7 +66,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/">
+  <meta property="og:url" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/">
   <meta property="og:site_name" content="The Sad Horse">
   <meta property="og:title" content="A Gentle Explanation of the Cyclic Attack on AES-GCM">
   <meta property="og:description" content="Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography">
@@ -78,11 +78,11 @@
     <meta property="article:tag" content="AES-GCM">
     <meta property="article:tag" content="Research">
     <meta property="article:tag" content="Cryptography">
-    <meta property="og:image" content="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
+    <meta property="og:image" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
+  <meta name="twitter:image" content="http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/feature.png">
   <meta name="twitter:title" content="A Gentle Explanation of the Cyclic Attack on AES-GCM">
   <meta name="twitter:description" content="Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography">
 
@@ -391,7 +391,7 @@
     "headline": "A Gentle Explanation of the Cyclic Attack on AES-GCM",
     "description": "Keywords: AES-GCM, Cyclic Attack, Weak keys, Cryptography",
     "inLanguage": "en",
-    "url" : "http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/",
+    "url" : "http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/",
     "author" : {
       "@type": "Person",
       "name": "h4n13"
@@ -405,7 +405,7 @@
     "keywords": ["AES-GCM","Research","Cryptography"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1860"
+    "wordCount": "1855"
   },
   {
     "@context": "https://schema.org",
@@ -414,17 +414,17 @@
             "@type": "ListItem",
             "position":  1 ,
             "name": "Symmetric Cipher",
-            "item": "http://localhost:49322/blog/symmetric-cipher/"
+            "item": "http://localhost:1313/blog/symmetric-cipher/"
           },{
             "@type": "ListItem",
             "position":  2 ,
             "name": "Blog",
-            "item": "http://localhost:49322/blog/"
+            "item": "http://localhost:1313/blog/"
           },{
         "@type": "ListItem",
         "position":  3 ,
         "name": "A Gentle Explanation of the Cyclic Attack on AES-GCM",
-        "item": "http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/"
+        "item": "http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/"
       }
     ]
   }]
@@ -1385,7 +1385,7 @@
 <p>However, despite its popularity, AES-GCM is not without its flaws. In recent years, researchers have uncovered several weaknesses and attack vectors, such as the <a href="https://eprint.iacr.org/2016/475.pdf"  target="_blank" rel="noreferrer"><em>Forbidden Attack</em></a> or the <a href="https://keymaterial.net/2020/09/07/invisible-salamanders-in-aes-gcm-siv/"  target="_blank" rel="noreferrer"><em>Invisible Salamander</em></a>. Among these interesting vulnerabilities is the <strong>Cyclic Attack</strong>, which targets specific &ldquo;weak keys&rdquo; in the GCM structure.</p>
 <p>
 
-In this post, I will introduce the AES-GCM mode of operation, explain the concept of weak keys, and then walk through the mechanics of the Cyclic Attack. Finally, there will be a challenge and solution section for readers to test their understanding of the material.</p>
+In this post, I will introduce the AES-GCM mode of operation, explain the concept of weak keys, and then walk through the mechanics of the Cyclic Attack.</p>
 <p>For those interested in the deep technical details, the original research paper for this attack can be found here: <a href="https://eprint.iacr.org/2011/202.pdf"  target="_blank" rel="noreferrer">Weak Keys in the GCM Mode of Operation (Saarinen, 2011)</a>.</p>
 
 <h2 class="relative group">Overview of AES-GCM
@@ -1555,7 +1555,7 @@ $P(x) = x^{128} + x^7 + x^2 + x + 1$</p>
 </li>
 </ul>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">length_block</span> <span class="o">=</span> <span class="p">((</span><span class="mi">8</span> <span class="o">*</span> <span class="n">len_aad</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">64</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">len_ct</span><span class="p">)</span></span></span></code></pre></div></div>
-<p>Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key,\(T\) is the constant term that combines the IV with the counter 1 (that why we start at 2 in encryption process). The GHASH is computed as follows in \(GF(2^{128})\):</p>
+<p>Now consider \(C_i\) as the \(i^{th}\) ciphertext block, \(A\) as the AAD block, \(L\) as the length block, and \(H\) as the hash key, \(T\) is the constant term that combines the IV with the counter 1 (<a href="https://crypto.stackexchange.com/questions/115011/why-does-the-gcm-counter-start-at-1"  target="_blank" rel="noreferrer">we start at 1 because if IV = 0 then it may leaks the authentication key H</a>). The GHASH is computed as follows in \(GF(2^{128})\):</p>
 $$
 GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T
 $$<p>Below is the encryption and decryption process in python:</p>
@@ -1706,7 +1706,7 @@ $$<p>This means if we swap the position of any two ciphertext blocks, the GHASH 
     </span>
     
 </h3>
-<p>So far, we have seen weak keys with orders 0 and 1. Now, let&rsquo;s explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:</p>
+<p>So far, we have seen weak keys with equal to 0 or have order of 1. Now, let&rsquo;s explore weak keys with small orders like 3, 5, and 17. If H has the order of \(d\), then \(H^d = I\). This property can be exploited in the GHASH computation. For example, if H has order 3, then:</p>
 $$
 GHASH(H,C,T) =A . H^{n+1} + C_{0} . H^{n} + ... + C_{n-1} . H + T
 $$<p>
@@ -1921,7 +1921,7 @@ First we can find a weak key with order n with the following code:</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col z-500 bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:49322/"
+  data-url="http://localhost:1313/"
   data-search-mode="modal">
   <div
     id="search-modal"

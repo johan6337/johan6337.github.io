@@ -3,36 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:49322/blog/symmetric-cipher/cylic-attack-gcm/</loc>
+    <loc>http://localhost:1313/blog/symmetric-cipher/cylic-attack-gcm/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:49322/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:49322/blog/symmetric-cipher/</loc>
+    <loc>http://localhost:1313/blog/symmetric-cipher/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:49322/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:49322/profile/</loc>
+    <loc>http://localhost:1313/profile/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:49322/blog/rsa/</loc>
+    <loc>http://localhost:1313/blog/rsa/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
